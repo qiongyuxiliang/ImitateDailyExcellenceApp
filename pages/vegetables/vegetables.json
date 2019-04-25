@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "pop": "../common/header/header"
+    "header": "../common/header/header"
   }
 }

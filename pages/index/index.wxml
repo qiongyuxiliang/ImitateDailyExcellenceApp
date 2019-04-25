@@ -18,7 +18,8 @@
   <scroll-view class="panel" scroll-x scroll-with-animation bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-left="{{scrollLeft}}">
     <view wx:for='{{swiperNav.arr}}' wx:key='{{index}}' class="scroll-view-item_H" bindtap='tapclick' data-num='{{index}}'>
          <navigator
-    url="/pages/vegetables/vegetables?title=vegetables"
+    url="/pages/vegetables/vegetables"
+     open-type="redirect"
     hover-class="none"
   >      <text class="{{swiperNav.cousedis==index?'active':''}} cont">{{item.txt}}</text>
 </navigator>

@@ -5,6 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
+    scrollLeft: 0,
+    swiperNav: {
+      cousedis: 0,
+      arr: [
+        { v: 0, txt: "推荐" },
+        { v: 1, txt: "商品" },
+        { v: 2, txt: "饮料冲调" },
+        { v: 3, txt: "休闲零食" },
+        { v: 4, txt: "生鲜" },
+        { v: 5, txt: "速食调味" }
+      ]
+    },
 
   },
 

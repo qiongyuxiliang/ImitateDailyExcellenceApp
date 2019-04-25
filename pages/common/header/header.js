@@ -64,11 +64,16 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    scroll(e) {
+      console.log(111)
+      this.setData({
+        scrollLeft: e.detail.scrollLeft,
+
+      })
+    },
     tapclick(e) {
-      console.log(e)
       this.setData({
         'swiperNav.cousedis': e.currentTarget.dataset.num,
-        message: e._relatedInfo.anchorTargetText,
       })
       if (e.currentTarget.dataset.num > 1 && e.currentTarget.dataset.num < this.data.swiperNav.arr.length - 2 && e.detail.x > (wx.getSystemInfoSync().windowWidth / 5 * 3)) {
         this.setData({
@@ -77,6 +82,14 @@ Component({
       } else if (e.currentTarget.dataset.num > 1 && e.currentTarget.dataset.num < (this.data.swiperNav.arr.length - 2) && e.detail.x < (wx.getSystemInfoSync().windowWidth / 5 * 2)) {
         this.setData({
           scrollLeft: this.data.scrollLeft - this.data.width,
+        })
+      } else if (e.currentTarget.dataset.num <= 1) {
+        this.setData({
+          scrollLeft: 0,
+        })
+      } else if (e.currentTarget.dataset.num >= (this.data.swiperNav.arr.length - 2)){
+        this.setData({
+          scrollLeft: this.data.scrollLeft+20,
         })
       }
     },
