@@ -1,6 +1,4 @@
-/**index.wxss**/
-@import "./weui.wxss";
-
+/* pages/header/header.wxss */
 .container {
   padding: 0;
   margin: 0;
@@ -107,82 +105,4 @@
 
 .cont.active {
   border-bottom: 2PX solid #ff4891;
-}
-
-.content {
-  margin-top: 0rem;
-  box-sizing: border-box;
-}
-
-.lunbo {
-  text-align: center;
-  position: relative;
-}
-
-.imgflag {
-  position: absolute;
-  bottom: 12%;
-  right: 10%;
-  display: block;
-  width: 10%;
-  padding: 2% 4%;
-  border-radius: 10px;
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.swiper {
-  height: 250px;
-}
-
-.cuurrentIndex {
-  color: rgb(255, 72, 145);
-}
-
-.totalLength {
-  color: white;
-}
-
-.image-view {
-  width: 100%;
-  height: 144px;
-}
-
-.img_container {
-  margin: 0 2%;
-  padding: 1.375rem 0;
-  border-bottom: 0.0625rem solid #f5f5f5;
-}
-
-.product_item_image {
-  width: 20%;
-  vertical-align: middle;
-}
-
-.text_container {
-  display: inline-block;
-  margin-left: 2%;
-}
-
-.product_name, .product_subtitle {
-  font-size: 0.7rem;
-  display: block;
-  line-height: 0.7rem;
-}
-
-.product_subtitle {
-  color: #969696;
-}
-.product_cart{
-  width: 8%;
-  vertical-align: middle;
-}
-.price_and_cart{
-  margin-top: 4%;
-  margin-left: 20%;
-  display: flex;
-  justify-content: space-between;
-}
-.price{
- font-size: 0.7rem;
- color: rgb(255, 72, 145);
 }

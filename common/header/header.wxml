@@ -1,0 +1,21 @@
+<!--pages/header/header.wxml-->
+  <view class='container'>
+    <view class="topbar">
+      <view class='imageContainer'>
+        <image src='../../images/arrive.png' class='topPic' mode='aspectFill'>
+        </image>
+        <view class='addressContainer'>
+          <text class='text'>东城区监察局</text>
+        </view>
+      </view>
+      <view>
+        <input type="text" class='search' placeholder="搜索" />
+      </view>
+    </view>
+    <!-- 面板切换栏 -->
+    <scroll-view class="panel" scroll-x scroll-with-animation bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-left="{{scrollLeft}}">
+      <view wx:for='{{swiperNav.arr}}' wx:key='{{index}}' class="scroll-view-item_H" bindtap='tapclick' data-num='{{index}}'>
+        <text class="{{swiperNav.cousedis==index?'active':''}} cont">{{item.txt}}</text>
+      </view>
+    </scroll-view>
+  </view>

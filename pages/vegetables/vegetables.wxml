@@ -1,0 +1,4 @@
+<!--pages/vegetables/vegetables.wxml-->
+<view>
+<vegetables></vegetables>
+</view>
