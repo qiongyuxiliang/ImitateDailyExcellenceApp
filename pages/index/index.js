@@ -2,11 +2,12 @@
 //获取应用实例
 const app = getApp()
 const order = ['red', 'yellow', 'blue', 'green', 'red']
-
+const width= 120;
 Page({
   data: {
     toView: 'green',
     scrollLeft: 0,
+    message:'推荐专区',
     swiperNav: {
          cousedis: 0,
       　　arr: [
@@ -26,20 +27,25 @@ Page({
     console.log(e)
   },
   scroll(e) {
-    console.log(e)
+    this.setData({
+      scrollLeft: e.detail.scrollLeft,
+     
+    })  
   },
   tapclick(e){
     console.log(e)
-    console.log(wx.getSystemInfoSync().windowWidth)
     this.setData({
-      'swiperNav.cousedis': e.currentTarget.dataset.num
+      'swiperNav.cousedis': e.currentTarget.dataset.num,
+      message: e._relatedInfo.anchorTargetText,
     })
-    if (e.currentTarget.dataset.num > 2 && e.detail.x > (wx.getSystemInfoSync().windowWidth/5*3)){
-      
+    if ( e.currentTarget.dataset.num>1&& e.currentTarget.dataset.num< this.data.swiperNav.arr.length - 2&& e.detail.x > (wx.getSystemInfoSync().windowWidth/5*3)){
       this.setData({
-        scrollLeft: this.scrollLeft+100,
+        scrollLeft: this.data.scrollLeft+width,
       })
-
+    } else if (e.currentTarget.dataset.num >1&&e.currentTarget.dataset.num < (this.data.swiperNav.arr.length- 2)&&e.detail.x < (wx.getSystemInfoSync().windowWidth / 5 * 2)){
+      this.setData({
+        scrollLeft: this.data.scrollLeft - width,
+      })
     }
   },
   tap(e) {

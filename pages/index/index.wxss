@@ -87,10 +87,14 @@
 }
 .cont{
   display: inline-block;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   width: auto;
 }
 .cont.active{
    border-bottom: 2PX solid #ff4891;
+}
+.content{
+  text-align: center;
+  margin-top: 5rem;
 }
 
