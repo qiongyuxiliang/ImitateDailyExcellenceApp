@@ -1,0 +1,5 @@
+<!--pages/common/cardImage/cardImage.wxml-->
+<view class='card_wrap_container'>
+  <image src="https://j-image.missfresh.cn/img_20181213003703821.jpg" mode='widthFix' class="card_wrap_image"></image>
+  <image src="https://j-image.missfresh.cn/img_20181213004855362.jpg" mode='widthFix' class="card_wrap_image"></image>
+</view>

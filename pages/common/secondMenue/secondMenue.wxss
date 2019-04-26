@@ -1,0 +1,16 @@
+/* pages/common/secondMenue/secondMenue.wxss */
+.detail_menue_container{
+  margin:3% 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menue{
+  text-align: center;
+  width: 15%;
+  font-size: 0.65rem;
+  white-space: nowrap
+}
+.detail_menue_image{
+  width: 100%;
+}

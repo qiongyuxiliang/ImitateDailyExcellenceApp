@@ -1,0 +1,7 @@
+<!--pages/common/secondMenue/secondMenue.wxml-->
+<view class='detail_menue_container'>
+  <view class='menue' wx:for="{{lanternArea}}" wx:key="{{index}}">
+    <image src="{{item.image_url}}" mode='widthFix' class="detail_menue_image"></image>
+    <view>{{item.title}}</view>
+  </view>
+</view>

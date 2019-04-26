@@ -3,13 +3,6 @@
   padding: 0;
   margin: 0;
 }
-
-.top {
-  top: 0;
-  z-index: 100;
-  background: white;
-}
-
 .topbar {
   display: flex;
   flex-direction: row;

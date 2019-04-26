@@ -1,0 +1,51 @@
+/* pages/common/carousel/carousel.wxss */
+.scroll-view-item_H {
+  position: relative;
+  display: inline-block;
+  margin: 0 0.9375rem;
+}
+
+.cont {
+  display: inline-block;
+  padding-bottom: 10px;
+  width: auto;
+}
+
+.cont.active {
+  border-bottom: 2PX solid #ff4891;
+}
+
+.content {
+  margin-top: 0rem;
+  box-sizing: border-box;
+}
+
+.lunbo {
+  text-align: center;
+  position: relative;
+
+}
+
+.imgflag {
+  position: absolute;
+  bottom: 12%;
+  right: 10%;
+  display: block;
+  width: 10%;
+  padding: 2% 4%;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.swiper {
+  height: 240px;
+  overflow: hidden;
+}
+
+.cuurrentIndex {
+  color: rgb(255, 72, 145);
+}
+
+.totalLength {
+  color: white;
+}

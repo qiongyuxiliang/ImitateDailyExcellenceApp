@@ -24,7 +24,7 @@ Page({
       'https://j-image.missfresh.cn/img_20180928154920705.jpg?iopcmd=thumbnail&amp;type=4&amp;width=640',
       'https://images.unsplash.com/photo-1551334787-21e6bd3ab135',
       'https://images.unsplash.com/photo-1551214012-84f95e060dee',
-      'https://images.unsplash.com/photo-1551446591-142875a901a1'
+      'https://images.unsplash.com/photo-1551446591-142875a901a1',
     ],
     indicatorDots: false,
     autoplay: true,
@@ -40,6 +40,10 @@ Page({
         "name": "金枕榴莲7斤起*1个",
         "cart_image": "https://j-image.missfresh.cn/img_20170425134548759.png",
         "price": 23,
+        "productsType":{
+          "forNewUser":true,
+          "forNewUser_flag":"新人专享"
+        }
       },
       {
         "image": "https://image.missfresh.cn/1ad93df319f347d29c1779198d808c18.jpg",
@@ -47,6 +51,10 @@ Page({
         "name": "金枕榴莲5斤起",
         "cart_image": "https://j-image.missfresh.cn/img_20170425134548759.png",
         "price": 23,
+        "productsType": {
+          "forNewUser": true,
+          "forNewUser_flag": "新人专享"
+        }
       },
       {
         "image": "https://image.missfresh.cn/45f00fead0454c008b8a000082b56236.jpg",
@@ -68,6 +76,10 @@ Page({
         "name": "美早樱桃450g*1盒",
         "cart_image": "https://j-image.missfresh.cn/img_20170425134548759.png",
         "price": 23,
+        "productsType": {
+          "forNewUser": true,
+          "forNewUser_flag": "新人专享"
+        }
       },
       {
         "image": "https://fms-image.missfresh.cn/ef9e0025438346198ae2f8401bd01bf3.jpg",
@@ -83,7 +95,28 @@ Page({
         "cart_image": "https://j-image.missfresh.cn/img_20170425134548759.png",
         "price": 23,
 
-      }]
+      }],
+      // 二级页面菜单
+      lanternArea : [
+        {
+          "image_url": "https://j-image.missfresh.cn/img_20181118234116965.png",
+      "title": "0元吃水果",
+      "content": "0元吃水果",
+    }, {
+          "image_url": "https://j-image.missfresh.cn/img_20181118234315430.png",
+      "title": "水果美容院",
+      "content": "一口吃回少女感",
+    }, {
+          "image_url": "https://j-image.missfresh.cn/img_20181118234340173.png",
+      "title": "加入会员",
+    }, {
+      "image_url": "https://j-image.missfresh.cn/img_20181118234537451.png",
+      "title": "本周上新",
+      "content": "本周上新",
+    }, {
+          "image_url": "https://j-image.missfresh.cn/img_20181118234837331.png",
+      "title": "每日签到",
+    }],
   },
   onLoad: function (options) {
     this.setData({
@@ -133,10 +166,5 @@ Page({
       scrollTop: this.data.scrollTop + 10
     })
   },
-  // 轮播图
-  switchPic(e){
-    this.setData({
-      currentIndex: e.detail.current+1,
-    })
-  }
+
 })

@@ -46,7 +46,10 @@ Component({
    * 组件的初始数据
    */
   data: {
-     width : 120,
+    page:'p0',
+    width : 120,
+    isScrollToLeftBase:true,
+    isScrollToRightBase:false,
     swiperNav: {
       cousedis: 0,
       arr: [
@@ -64,14 +67,35 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    // 向父组件传递数据
     scroll(e) {
-      console.log(111)
       this.setData({
         scrollLeft: e.detail.scrollLeft,
+      })
+    },
+    bindscrolltoupper(e){
+      this.setData({
+        isScrollToLeftBase: true
+      })
 
+    },
+    bindscrolltolower(e){
+      this.setData({
+        isScrollToRightBase: true  
       })
     },
     tapclick(e) {
+      // 切换页面
+     this.setData({
+       page: 'p' + e.currentTarget.dataset.num,
+     })
+      //如果点击的菜单和上一次的不一样and 不是点击最后两个，则重置状态
+      if (e.currentTarget.dataset.num != this.data.swiperNav.cousedis && e.currentTarget.dataset.num < (this.data.swiperNav.arr.length - 2)){
+        this.setData({
+          isScrollToRightBase: false,
+        })
+
+      }
       this.setData({
         'swiperNav.cousedis': e.currentTarget.dataset.num,
       })
@@ -87,12 +111,12 @@ Component({
         this.setData({
           scrollLeft: 0,
         })
-      } else if (e.currentTarget.dataset.num >= (this.data.swiperNav.arr.length - 2)){
+      } else if (!this.data.isScrollToRightBase&&e.currentTarget.dataset.num >= (this.data.swiperNav.arr.length - 2)){
         this.setData({
-          scrollLeft: this.data.scrollLeft+20,
+          scrollLeft: this.data.scrollLeft+80,
+          isScrollToRightBase:true,
         })
       }
     },
-
   }
 })

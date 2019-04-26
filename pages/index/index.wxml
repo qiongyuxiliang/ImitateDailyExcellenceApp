@@ -1,64 +1,23 @@
-<!--index.wxml-->
+<!-- index.wxml -->
 <!-- 头部搜索与地址框 -->
-<view class='top'>
-<view class='container'>
-  <view class="topbar">
-    <view class='imageContainer'>
-      <image src='../../images/arrive.png' class='topPic' mode='aspectFill'>
-      </image>
-      <view class='addressContainer'>
-        <text class='text'>东城区监察局</text>
-      </view>
-    </view>
-    <view>
-      <input type="text" class='search' placeholder="搜索" />
-    </view>
+<view>
+<view class='opacityHeight'></view>
+  <view class='top'>
+    <header scrollLeft='{{scrollLeft}}' swiperNav='{{swiperNav}}'></header>
   </view>
-  <!-- 面板切换栏 -->
-  <scroll-view class="panel" scroll-x scroll-with-animation bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-left="{{scrollLeft}}">
-    <view wx:for='{{swiperNav.arr}}' wx:key='{{index}}' class="scroll-view-item_H" bindtap='tapclick' data-num='{{index}}'>
-         <navigator
-    url="/pages/vegetables/vegetables"
-     open-type="redirect"
-    hover-class="none"
-  >      <text class="{{swiperNav.cousedis==index?'active':''}} cont">{{item.txt}}</text>
-</navigator>
-    </view>
-  </scroll-view>
-</view>
-
   <view class='content'>
-  <view class='lunbo'>
-    <swiper indicator-dots="{{indicatorDots}}"
-    circular=true
-    bindchange='switchPic'
-    autoplay="{{autoplay}}" 
-    interval="{{interval}}"
-     duration="{{duration}}" class='swiper'>
-      <block wx:for="{{imgUrls}}" wx:key="*this">
-        <swiper-item style="with:100%;">
-          <image src="{{item}}" class="slide-image swiper-item " mode="scaleToFill" style="width: 100%;heigth:400px; "></image>
-        </swiper-item>
-      </block>
-    </swiper>
-    <text class='imgflag'><text class='cuurrentIndex'>{{currentIndex}}</text><text class='totalLength'>/{{imgUrlLength}}</text></text>
-  </view>
-  <view>
-         <image src="https://j-image.missfresh.cn/mis_img_20190314230442856.png" class="image-view" style=""></image>
-  </view>
-  <scroll-view scroll-y>
-    <view wx:for="{{products}}" wx:key='{{index}}' class='img_container'>
-      <image src='{{item.image}}' class='product_item_image' mode="widthFix"></image>
-      <view class='text_container'>
-      <view class='product_name'>{{item.name}}</view>
-      <view class='product_subtitle'>{{item.subtitle}}</view>
-      </view>
-      <view class='price_and_cart'>
-      <text class='price'>￥{{item.price}}</text>
-      <image class='product_cart' src='{{item.cart_image}}' mode="widthFix"></image>
-      </view>
-      
+    <view class='p0' wx:if="{{page=='p0'}}">
+    <secureCard></secureCard>
+    <secondMenue lanternArea="{{lanternArea}}"></secondMenue>
+    <cardImage></cardImage>
     </view>
-    </scroll-view>
+    <view class='p1' wx:elif="{{page=='p1'}}">
+      <carousel imgUrls="{{imgUrls}}" autoplay="{{autoplay}} " interval="{{interval}} " duration="{{duration}} " imgUrlLength="{{imgUrlLength}} "></carousel>
+      <view>
+        <image src="https://j-image.missfresh.cn/mis_img_20190314230442856.png " class="image-view " style=" "></image>
+      </view>
+    </view>
+
+    <productList products='{{products}}'></productList>
   </view>
 </view>

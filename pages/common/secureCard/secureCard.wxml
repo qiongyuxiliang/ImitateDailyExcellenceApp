@@ -1,0 +1,16 @@
+<!--pages/common/secureCard/secureCard.wxml-->
+    <view class='guarantee_container'>
+      <view class='guarantee'>
+        <image src="https://j-image.missfresh.cn/img_20170627185311186.png" class='guarantee_image' mode="widthFix"></image>
+        <text class='guarantee_text'>优鲜严选</text>
+      </view>
+      <view class='guarantee'>
+        <image src="https://j-image.missfresh.cn/img_20170627184654084.png" class='guarantee_image' mode='widthFix'></image>
+        <text class='guarantee_text'>安心检测</text>
+      </view>
+      <view class='guarantee'>
+        <image src="https://j-image.missfresh.cn/img_20170718194948016.png" class='guarantee_image' mode='widthFix'></image>
+        <text class='guarantee_text'>赔付保障</text>
+      </view>
+    </view>
+    <view class="category-border"></view>

@@ -1,0 +1,25 @@
+/* pages/common/secureCard/secureCard.wxss */
+.guarantee_container{
+  display: flex;
+  justify-content: space-around;
+  height: 3.0625rem;
+  line-height: 3.0625rem;
+}
+.guarantee{
+  min-width: 5rem;
+}
+.guarantee_image{
+  width: 20%;
+  vertical-align: middle;
+  margin-right: 1%;
+}
+.guarantee_text{
+  font-size: 0.7rem;
+}
+/* border */
+ .category-border {
+    width: 94%;
+    height: 1PX;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+}

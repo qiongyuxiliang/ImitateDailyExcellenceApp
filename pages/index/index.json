@@ -1,1 +1,11 @@
-{}
+{
+  "usingComponents": {
+    "header": "../common/header/header",
+    "productList":"../common/productList/productList",
+    "carousel": "../common/carousel/carousel",
+    "secureCard":"../common/secureCard/secureCard",
+    "secondMenue":"../common/secondMenue/secondMenue",
+    "cardImage": "../common/cardImage/cardImage",
+    "firstOrder": "../common/firstOrder/firstOrder"
+  }
+}

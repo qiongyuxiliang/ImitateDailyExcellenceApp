@@ -1,0 +1,8 @@
+/* pages/common/firstOrder/firstOrder.wxss */
+
+/* 首单 */
+
+.image_view {
+  width: 100%;
+  margin: 4% 0;
+}

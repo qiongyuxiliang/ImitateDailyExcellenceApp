@@ -1,0 +1,16 @@
+<!--pages/common/carousel/carousel.wxml-->
+<view class='lunbo'>
+    <swiper
+    circular=true
+    bindchange='switchPic'
+    autoplay="{{autoplay}}" 
+    interval="{{interval}}"
+    duration="{{duration}}" class='swiper'>
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <swiper-item style="with:100%;">
+          <image src="{{item}}" class="slide-image swiper-item " mode="scaleToFill" style="width: 100%;heigth:400px; "></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <text class='imgflag'><text class='cuurrentIndex'>{{currentIndex}}</text><text class='totalLength'>/{{imgUrlLength}}</text></text>
+  </view>
