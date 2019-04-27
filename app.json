@@ -1,14 +1,15 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/vegetables/vegetables"
+    "pages/logs/logs"
+   
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh":true
   },
   "tabBar": {
     "color": "#707070",
@@ -31,6 +32,9 @@
   "networkTimeout": {
     "request": 10000,
     "downloadFile": 10000
+  },
+  "usingComponents":{
+    "mask": "./pages/common/mask/mask"
   },
   "sitemapLocation": "sitemap.json"
 }

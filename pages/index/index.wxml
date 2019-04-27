@@ -2,9 +2,9 @@
 <!-- 头部搜索与地址框 -->
 <view>
 <view class='opacityHeight'></view>
-  <view class='top'>
-    <header scrollLeft='{{scrollLeft}}' swiperNav='{{swiperNav}}'></header>
-  </view>
+  
+    <header id="header" scrollLeft='{{scrollLeft}}' swiperNav='{{swiperNav}}' bind:getSelector="onGetSector"></header>
+  
   <view class='content'>
     <view class='p0' wx:if="{{page=='p0'}}">
     <secureCard></secureCard>
@@ -21,3 +21,4 @@
     <productList products='{{products}}'></productList>
   </view>
 </view>
+<mask id="mask" bind:hideMask="_hideMask"></mask>

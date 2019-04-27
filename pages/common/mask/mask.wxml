@@ -1,0 +1,4 @@
+<!--pages/common/mask/mask.wxml-->
+<view class='mask' hidden='{{maskFlag}}'>
+<view class='wx-dialog-btn' catchtap='_hideMask'>隐藏</view>
+</view>

@@ -7,5 +7,6 @@
     "secondMenue":"../common/secondMenue/secondMenue",
     "cardImage": "../common/cardImage/cardImage",
     "firstOrder": "../common/firstOrder/firstOrder"
+
   }
 }

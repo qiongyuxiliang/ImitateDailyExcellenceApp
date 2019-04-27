@@ -1,31 +1,38 @@
 <!--pages/header/header.wxml-->
-  <view class='container'>
-    <view class="topbar">
-      <view class='imageContainer'>
-        <image src='../../../images/arrive.png' class='topPic' mode='aspectFill'>
-        </image>
-        <view class='addressContainer'>
-          <text class='text'>东城区监察局</text>
-        </view>
-      </view>
-      <view>
-        <input type="text" class='search' placeholder="搜索" />
+
+<view class='container'>
+  <view class="topbar">
+    <view class='imageContainer'>
+      <image src='../../../images/arrive.png' class='topPic' mode='aspectFill'>
+      </image>
+      <view class='addressContainer'>
+        <text class='text'>东城区监察局</text>
       </view>
     </view>
-    <!-- 面板切换栏 -->
-    <scroll-view class="panel" scroll-x scroll-with-animation  bindscroll="scroll" 
-    bindscrolltolower="bindscrolltolower"
-    bindscrolltoupper="bindscrolltoupper"
-    scroll-left="{{scrollLeft}}">
-      <view wx:for='{{swiperNav.arr}}' wx:key='{{index}}' class="scroll-view-item_H" bindtap='tapclick' data-num='{{index}}'>
-               <!-- <navigator
+    <view>
+      <input type="text" class='search' placeholder="搜索" />
+    </view>
+  </view>
+  <!-- 面板切换栏 -->
+  <view>
+    <view class='pull_down'></view>
+    <view class='pull_down_menu'>
+    <text class='pull_down_text'>全部商品</text>
+    </view>
+    <scroll-view class="panel" scroll-x scroll-with-animation bindscroll="scroll" bindscrolltolower="bindscrolltolower" bindscrolltoupper="bindscrolltoupper" scroll-left="{{scrollLeft}}">
+    <view wx:for='{{swiperNav.arr}}' wx:key='{{index}}' class="scroll-view-item_H" bindtap='_tapclick' data-num='{{index}}'>
+      <!-- <navigator
     url="/pages/vegetables/vegetables"
      open-type="redirect"
     hover-class="none"
   >      <text class="{{swiperNav.cousedis==index?'active':''}} cont">{{item.txt}}</text>
 </navigator> -->
- <text class="{{swiperNav.cousedis==index?'active':''}} cont">{{item.txt}}</text>
-      </view>
-    </scroll-view>
+      <navigator url="/pages/vegetables/vegetables" open-type="switchTab" hover-class="none">
+        <text class="{{swiperNav.cousedis==index?'active':''}} cont">{{item.txt}}</text>
+      </navigator>
+      <!-- <text class="{{swiperNav.cousedis==index?'active':''}} cont">{{item.txt}}</text> -->
+    </view>
+  </scroll-view>
   </view>
-  
+
+</view>

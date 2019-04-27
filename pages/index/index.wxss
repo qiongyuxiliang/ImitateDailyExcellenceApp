@@ -8,27 +8,6 @@
 .opacityHeight{
   height: 4rem;
 }
-.top{
-  position: fixed;
-  z-index: 100;
-  background: white;
-  top: 0;
-}
-.scroll-view-item_H {
-  position: relative;
-  display: inline-block;
-  margin: 0 0.9375rem;
-}
-
-.cont {
-  display: inline-block;
-  padding-bottom: 10px;
-  width: auto;
-}
-
-.cont.active {
-  border-bottom: 2PX solid #ff4891;
-}
 
 .content {
   margin-top: 0rem;

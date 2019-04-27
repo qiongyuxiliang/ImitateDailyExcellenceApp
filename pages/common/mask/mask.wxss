@@ -1,0 +1,14 @@
+/* pages/common/mask/mask.wxss */
+page{
+  height: 100%;
+}
+.mask{
+  width:100%;
+  height:100%;
+  position:fixed;
+  background-color:#999;
+  z-index:9999;
+  top:0;
+  left:0;
+  opacity:0.5;
+}
