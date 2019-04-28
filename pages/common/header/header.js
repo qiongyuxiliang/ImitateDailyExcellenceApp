@@ -26,6 +26,10 @@ Component({
       type: Number, // 类型（必填），目前接受的类型包括：String, Number, Boolean, Object, Array, null（表示任意类型） 
       value: 0 // 属性初始值（可选），如果未指定则会根据类型选择一个 
     },
+    isScroll:{
+      type:Boolean,
+      value:true,
+    },
     swiperNav: {
       type: Object,
       value: {
@@ -66,6 +70,7 @@ Component({
     width: 120,
     isScrollToLeftBase: true,
     isScrollToRightBase: false,
+    isScroll:true,
     swiperNav: {
       cousedis: 0,
       arr: [{
@@ -95,13 +100,22 @@ Component({
       ],
     }
   },
-
+  ready: function () {
+    this.mask = this.selectComponent("#mask");
+    console.log(this.mask.data.isScroll)
+  },
   /**
    * 组件的方法列表
    */
   methods: {
     // 向父组件传递数据
-
+    _hideMask() { //触发成功回调 
+      this.mask.hideFlag();
+      console.log(this.mask.data.isScroll)
+    },
+    catchtouchmove(e){
+    //  return false;
+    },
     scroll(e) {
       this.setData({
         scrollLeft: e.detail.scrollLeft,
@@ -150,8 +164,10 @@ Component({
         })
       }
       // 切换页面
-      var theSelector = e.currentTarget.dataset.num;
-      this.triggerEvent('getSelector', theSelector);
+      let theSelector = e.currentTarget.dataset.num;
+      let isScroll = this.mask.data.isScroll;
+     
+      this.triggerEvent('getSelector', { "theSelector": theSelector, "isScroll": isScroll});
     },
   }
 })

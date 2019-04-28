@@ -1,15 +1,15 @@
 <!-- index.wxml -->
 <!-- 头部搜索与地址框 -->
-<view>
-<view class='opacityHeight'></view>
-  
-    <header id="header" scrollLeft='{{scrollLeft}}' swiperNav='{{swiperNav}}' bind:getSelector="onGetSector"></header>
-  
-  <view class='content'>
+<view class="scroll {{isScroll?'':'notScroll'}}">
+  <view class='opacityHeight'></view>
+
+  <header id="header" scrollLeft='{{scrollLeft}}' swiperNav='{{swiperNav}}' bind:getSelector="onGetSelector"></header>
+
+  <view class='content '>
     <view class='p0' wx:if="{{page=='p0'}}">
-    <secureCard></secureCard>
-    <secondMenue lanternArea="{{lanternArea}}"></secondMenue>
-    <cardImage></cardImage>
+      <secureCard></secureCard>
+      <secondMenue lanternArea="{{lanternArea}}"></secondMenue>
+      <cardImage></cardImage>
     </view>
     <view class='p1' wx:elif="{{page=='p1'}}">
       <carousel imgUrls="{{imgUrls}}" autoplay="{{autoplay}} " interval="{{interval}} " duration="{{duration}} " imgUrlLength="{{imgUrlLength}} "></carousel>
@@ -21,4 +21,3 @@
     <productList products='{{products}}'></productList>
   </view>
 </view>
-<mask id="mask" bind:hideMask="_hideMask"></mask>

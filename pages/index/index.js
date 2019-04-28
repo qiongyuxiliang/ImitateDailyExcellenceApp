@@ -5,6 +5,7 @@ const order = ['red', 'yellow', 'blue', 'green', 'red']
 const width= 120;
 Page({
   data: {
+    isScroll:false,
     toView: 'green',
     scrollLeft: 0,
     message:'推荐专区',
@@ -121,24 +122,19 @@ Page({
   },
   onReady: function () {
     this.header = this.selectComponent('#header');
-    this.mask = this.selectComponent("#mask");
+    // this.mask = this.selectComponent("#mask");
   },
   onLoad: function (options) {
     this.setData({
       imgUrlLength:this.data.imgUrls.length
     })
   },
-  onGetSector(e){
+  onGetSelector(e){
+    console.log( e.detail)
     this.setData({
-      page: 'p'+e.detail,
+      page: 'p' + e.detail.theSelector,
+      isScroll: e.detail.isScroll,
     })
   },
-  // 全局遮罩
-  _showMask() { //触发取消回调 
-    this.mask._showMask();
-  },
-  _hideMask() { //触发成功回调 
-    console.log(this.mask)
-  } 
 
 })

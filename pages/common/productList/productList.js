@@ -7,7 +7,7 @@ Component({
     products:{
       type: Array,
       value:[],
-    }
+    },
   },
 
   /**

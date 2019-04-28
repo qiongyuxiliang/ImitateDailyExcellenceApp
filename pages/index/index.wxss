@@ -10,10 +10,16 @@
 }
 
 .content {
+  height: 100%;
   margin-top: 0rem;
   box-sizing: border-box;
 }
-
+.notScroll{
+  height: 100%;
+  margin-top: 0rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
 .imgflag {
   position: absolute;
   bottom: 12%;

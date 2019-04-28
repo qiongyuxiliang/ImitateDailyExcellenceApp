@@ -8,7 +8,6 @@ Component({
       type:Boolean,
       value:false,
     },
-
   },
 
   /**
@@ -16,6 +15,7 @@ Component({
    */
   data: {
     maskFlag: false,
+    isScroll:false,
   },
 
   /**
@@ -25,12 +25,17 @@ Component({
     showFlag: function () {
       this.setData({
         maskFlag: false,
+        isScroll: false,
       })
     },
     hideFlag: function () {
       this.setData({
         maskFlag: true,
+        isScroll: true,
       })
+    },
+    touchmove(e) {
+    
     },
     /** 
      * 内部私有方法建议以下划线开头 
