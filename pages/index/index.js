@@ -5,7 +5,7 @@ const order = ['red', 'yellow', 'blue', 'green', 'red']
 const width= 120;
 Page({
   data: {
-    isScroll:false,
+    isScroll:true,
     toView: 'green',
     scrollLeft: 0,
     message:'推荐专区',
@@ -130,11 +130,15 @@ Page({
     })
   },
   onGetSelector(e){
-    console.log( e.detail)
     this.setData({
       page: 'p' + e.detail.theSelector,
-      isScroll: e.detail.isScroll,
     })
   },
+  isScrollFun(e){
+    console.log(e.detail.isScroll);
+    this.setData({
+      isScroll: e.detail.isScroll
+    })
+  }
 
 })

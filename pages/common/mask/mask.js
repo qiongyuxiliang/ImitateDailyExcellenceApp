@@ -6,7 +6,7 @@ Component({
   properties: {
     maskFlag:{
       type:Boolean,
-      value:false,
+      value:true,
     },
   },
 
@@ -14,7 +14,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    maskFlag: false,
+    maskFlag: true,
     isScroll:false,
   },
 
@@ -23,12 +23,14 @@ Component({
    */
   methods: {
     showFlag: function () {
+      console.log(11)
       this.setData({
         maskFlag: false,
         isScroll: false,
       })
     },
     hideFlag: function () {
+      console.log(22)
       this.setData({
         maskFlag: true,
         isScroll: true,

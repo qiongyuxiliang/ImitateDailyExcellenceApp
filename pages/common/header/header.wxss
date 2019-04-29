@@ -4,7 +4,9 @@
   padding: 0;
   margin: 0;
 }
-
+.opacityHeight{
+  height: 4rem;
+}
 .topbar {
   display: flex;
   flex-direction: row;
@@ -111,7 +113,7 @@
 
 .pull_down {
   position: fixed;
-  z-index: 101;
+  z-index: 10000;
   top: 1.7rem;
   width: 10%;
   right: 0;
@@ -135,7 +137,7 @@
   z-index: 10000;
   background: white;
   width: 100%;
-  max-height: 70%;
+  max-height: 73%;
   /* overflow: scroll; */
 }
 
@@ -153,26 +155,33 @@
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAVFBMVEX///9lW2F/d3zz8vKyrbD4+PjZ1tidlpqXkZVvZmttY2np5+jy8fLq6erc2tzW09XOy828uLu7trmspqmMhYmJgYZ8dHlzanDHw8Xj4eL6+vrHxMabVOuCAAABHUlEQVQ4y4TRSY7EIBBE0QjMDJ7Hqr7/PVtyI+OmbNdbsfjKVAr8Vw9mWrxfJjPUuBWl4ImQEVeU9KQzmw5KBb0ZR3qp8KFbSatxoi25dihIcm5QaGZS4uxtyR4XetK+kVm6FpdaR3ve6wJuvFze3pEtbrVkukit7PGg56rS4hmP5r/l0bPBo4Y+7gMtvrD7SEGdTxwrJNX4yn9EAdR0OIwUVeoERxwcaww0OFRiL/MjMRxg+IMs7kHZYaPBRA0UM8sOmhMWBpRl2SFwgadCWZYdFP3viFZItNXEe4adUQJZHc7gwRHgPBgBTnQUEpsoiE5mRCdcYrMC0ZmL+OxKuADghhcAhIsU0gopwsUemQUpomiWRi2ayS7sCVcfAOCtDVucixtVAAAAAElFTkSuQmCC) no-repeat center center;
   background-size: 1.25rem 1.25rem;
 }
+
 /* 下拉菜单项 */
-.menu_item_list{
+
+.menu_item_list {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
   /* height: 100px; */
-  max-height: 100px;
+  max-height: 100%;
   overflow-y: scroll;
- 
 }
 
-.menu_item_detail{
+.menu_item_detail {
   width: 33%;
-   padding-bottom: 8%;
+  padding-bottom: 8%;
 }
-.menu_item_image{
+
+.menu_item_image {
   width: 50%;
 }
-.menu_item_text{
+
+.menu_item_text {
   display: block;
+}
+/* 对最后一个切换的面板你添加样式 */
+.last_item{
+  margin-right: 3rem
 }

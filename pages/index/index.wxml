@@ -1,9 +1,9 @@
 <!-- index.wxml -->
 <!-- 头部搜索与地址框 -->
 <view class="scroll {{isScroll?'':'notScroll'}}">
-  <view class='opacityHeight'></view>
+  
 
-  <header id="header" scrollLeft='{{scrollLeft}}' swiperNav='{{swiperNav}}' bind:getSelector="onGetSelector"></header>
+  <header id="header" scrollLeft='{{scrollLeft}}' swiperNav='{{swiperNav}}' bind:getSelector="onGetSelector" bind:isScrollFun="isScrollFun"></header>
 
   <view class='content '>
     <view class='p0' wx:if="{{page=='p0'}}">
@@ -17,7 +17,7 @@
         <image src="https://j-image.missfresh.cn/mis_img_20190314230442856.png " class="image-view " style=" "></image>
       </view>
     </view>
-
     <productList products='{{products}}'></productList>
   </view>
 </view>
+<floatImage></floatImage>

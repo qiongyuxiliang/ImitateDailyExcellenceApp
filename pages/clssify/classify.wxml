@@ -1,0 +1,14 @@
+<!--pages/clssify/classify.wxml-->
+<view class='classify'>
+  <view class='opacityHeight'></view>
+
+  <header id="header" scrollLeft='{{scrollLeft}}' swiperNav='{{swiperNav}}' bind:getSelector="onGetSelector" bind:isScrollFun="isScrollFun"></header>
+  <view class='left_banner'>
+   <view wx:for="{{leftBarList}}" wx:key="{{index}}" data-index="{{index}}" class="left_baner_item {{index==selected?'selected':''}}" bindtap='selectItem' >
+     <text class='left_baner_item_text'>{{item.name}}</text>    
+   </view>
+  </view>
+  <view class='right_detail'>
+2222
+  </view>
+</view>

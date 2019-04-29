@@ -1,0 +1,7 @@
+/* pages/common/floatImage/floatImage.wxss */
+.floatImage{
+  width: 10%;
+  position: fixed;
+  bottom: 2%;
+  right: 3%;
+}

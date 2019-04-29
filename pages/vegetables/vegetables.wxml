@@ -1,4 +1,0 @@
-<!--pages/vegetables/vegetables.wxml-->
-<view>
-<header scrollLeft='{{scrollLeft}}' swiperNav='{{swiperNav}}'></header>
-</view>

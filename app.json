@@ -1,8 +1,8 @@
 {
-  "pages": [
+  "pages": [ 
+    "pages/clssify/classify",
     "pages/index/index",
     "pages/logs/logs"
-   
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -21,6 +21,12 @@
         "selectedIconPath": "./images/shouyeSelected.png"
       },
       {
+        "pagePath": "pages/clssify/classify",
+        "text": "分类",
+        "iconPath": "./images/classify.png",
+        "selectedIconPath": "./images/classifySelected.png"
+      },
+      {
         "pagePath": "pages/logs/logs",
         "text": "个人中心",
         "iconPath": "./images/wode.png",
@@ -32,8 +38,9 @@
     "request": 10000,
     "downloadFile": 10000
   },
-  "usingComponents":{
-    "mask": "./pages/common/mask/mask"
+  "usingComponents": {
+    "mask": "./pages/common/mask/mask",
+    "floatImage": "./pages/common/floatImage/floatImage"
   },
   "sitemapLocation": "sitemap.json"
 }
