@@ -2,15 +2,23 @@
 <view class='classify'>
   <view class='opacityHeight'></view>
 
-  <header id="header" scrollLeft='{{scrollLeft}}' swiperNav='{{swiperNav}}' bind:getSelector="onGetSelector" bind:isScrollFun="isScrollFun" ></header>
+  <header id="header" scrollLeft='{{scrollLeft}}' swiperNav='{{swiperNav}}' bind:getSelector="onGetSelector" bind:isScrollFun="isScrollFun"></header>
   <view class='left_banner'>
     <view wx:for="{{leftBarList}}" wx:key="{{index}}" data-index="{{index}}" data-internalId="{{item.internalId}}" class="left_baner_item {{index==selected?'selected':''}}" bindtap='selectItem'>
       <text class='left_baner_item_text'>{{item.name}}</text>
     </view>
   </view>
   <view class='right_detail'>
-    <view wx:for="{{rigthDetailProducts}}" wx:key="{{index}}">
-      <view wx:if="{{item.titleInfo.title}}">{{item.titleInfo.title}}</view>
+    <!-- 头部的切换栏 -->
+    <view class='pull_down'>
+      <image class='pull_down_image' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAZtJREFUWAntlb1KxTAcxW9blC7dxV1QB1cd9QF0UkGcuvQD30AfQ6gtFYq4FQd1cPVOvoCLvoFL6drLhdbzBwOxtR9pCi4JhKTpycnvnv7bO5upphJQCagEVAIqgWkSqKpKm8ZJzKVxaJqmRpZld7A5QX8zTfPMtu0vMdu/1WEYbpRlea9p2jYU177vX9WVen0hz/NDpHOOvoq+XxTFa5Ika3Wd6PUPzBz7duFroV/GcbxT92kAQbDkRdi4KQvFwazz3kir4q9p3gByHOcF64+8UAaqDQaP7cZ13Xf+HJo3gCCsDMM4xfjMi8dAdcDcep53wfuzeaOo2Y0oilYQ6QNAjtgajQD9QKEf9BV6D4xDP5z3ZfNWIBKMhRoLQ2d2Ao2BkoEZBCQCJQszGGgI1GKxsFBzc2h/vdqoFSrg1pohb771PjJe3FFTnyh+C1opGDpLCIg2tEHRPb6JJsP2CgPRxj6osTDkPQqoC0oGhnwbX2paHNLw2V/qun4MgCemxzwWKWC2b/IxCII9/HNvTW6sDFUCKgGVwD8k8A1I7BVK4WrKaAAAAABJRU5ErkJggg=="
+        mode="widthFix"></image>
+    </view>
+    <scroll-view class='right_detail_scroll' scroll-x>
+      <view class='right_detail_switchBar {{index==topBarList.length-1?"lastItem":""}}' wx:for="{{topBarList}}" wx:key="{{index}}">{{item.name}}</view>
+    </scroll-view>
+    <view wx:for="{{rigthDetailProducts}}" wx:key="{{index}}" data-sku="{{item.normalProducts.sku}}" bindtap='toProductsDetail'>
+      <view wx:if="{{item.titleInfo.title}}" class='titleInfo'>{{item.titleInfo.title}}</view>
       <view wx:if="{{item.normalProducts}}" class='right_detail_list'>
         <view class='right_detail_image_container'>
           <image src="{{item.normalProducts.image}}" mode="widthFix" class='right_detail_image'></image>
@@ -20,7 +28,7 @@
           <text class='right_detail_subtitle'>{{item.normalProducts.subtitle}}</text>
           <view class='right_detail_price'>
             <view class='right_detail_vipPrice' wx:if="{{item.normalProducts.pricePro.vip.price}}">￥{{item.normalProducts.pricePro.vip.price/100}}</view>
-                        <view class='right_detail_vipPrice' wx:else="{{!item.normalProducts.pricePro.vip.price}}"></view>
+            <view class='right_detail_vipPrice' wx:else="{{!item.normalProducts.pricePro.vip.price}}"></view>
             <view class='right_detail_noVipPrice {{item.normalProducts.pricePro.vip.price?"":"right_detail_vipPrice"}}'>￥{{item.normalProducts.pricePro.noVip.price/100}}</view>
           </view>
         </view>

@@ -1,5 +1,9 @@
 /* pages/clssify/classify.wxss */
-
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
 .classify {
   padding-top: 1rem;
   display: flex;
@@ -19,7 +23,7 @@
 .left_baner_item {
   display: block;
   width: 100%;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: #474245;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -39,12 +43,13 @@
 }
 
 .right_detail {
-  margin: 1rem 0;
+  margin: 0.4rem 0;
   width: 80%;
   /* background: peachpuff; */
   overflow-y: scroll;
   overflow-x: hidden;
   padding: 0 2%;
+  position: relative;
 }
 
 .right_detail_list {
@@ -90,4 +95,44 @@
 }
 .right_detail_vipPrice.right_detail_noVipPrice{
   margin-top: 1rem;
+}
+/*面板切换 */
+.right_detail_scroll{
+  width: 100%;
+  white-space: nowrap;
+  position: fixed;
+   background: white;
+}
+.right_detail_switchBar{
+  display: inline-block;
+    font-size: 0.75rem;
+    color: #474245;
+    height: 2.25rem;
+    line-height: 2.25rem;
+    margin: 0rem 0.3rem;
+  
+}
+.right_detail_switchBar.lastItem{
+  margin-right: 3rem;
+}
+.titleInfo{
+    font-size: 0.85rem;
+    margin-top: 2.5rem;
+}
+/* 下拉菜单的按钮 */
+.pull_down{
+  text-align: center;
+  width: 10%;
+  padding-right: 2%;
+  height:2.25rem;
+  line-height:2.25rem;
+  position: fixed;
+  right: 0;
+  /* top:0; */
+  background: white;
+  z-index: 100;
+}
+.pull_down_image{
+  width: 50%;
+  vertical-align: middle;
 }

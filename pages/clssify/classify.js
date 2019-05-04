@@ -9,7 +9,7 @@ Page({
     selected:0,
     rigthDetailProducts:[],
     categoryCode:'jsd-hb-newsy',
-    topBarList:[]
+    topBarList:[],
   },
 
   /**
@@ -35,7 +35,7 @@ Page({
       method:"post",
       data: { "param": { "categoryCode": "jsd-hb-newsy" }, "common": { "stationCode": "MRYX|mryx_bj_dsbjs", "deliveryType": 1, "chromeType": 0, "addressCode": 110101, "currentLng": 116.41637, "currentLat": 39.92855, "device_id": "b2c05f00-6843-11e9-b8f9-59469261f3f2", "env": "web", "platform": "web", "uuid": "b2c05f00-6843-11e9-b8f9-59469261f3f2", "version": "8.7.0", "fromSource": "zhuye", "screenHeight": 640, "screenWidth": 360 } },
       success(res){
-        console.log(res)
+        console.log(res.data.data.cellList)
         that.setData({
           rigthDetailProducts: res.data.data.cellList,
           topBarList: res.data.data.secondGroupInfo
@@ -91,6 +91,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  toProductsDetail:function(e){
+    wx.navigateTo({
+      url: '../productDetail/productDetail?productId='+e.currentTarget.dataset.sku
+    })
   },
   /**
    * 点击选中事件
