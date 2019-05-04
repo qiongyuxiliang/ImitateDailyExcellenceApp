@@ -3,7 +3,7 @@
 <view class="scroll {{isScroll?'':'notScroll'}}">
   
 
-  <header id="header" scrollLeft='{{scrollLeft}}' swiperNav='{{swiperNav}}' bind:getSelector="onGetSelector" bind:isScrollFun="isScrollFun"></header>
+  <header id="header" scrollLeft='{{scrollLeft}}' swiperNav='{{swiperNav}}' bind:getSelector="onGetSelector" bind:isScrollFun="isScrollFun" isFirstPage="true"></header>
 
   <view class='content '>
     <view class='p0' wx:if="{{page=='p0'}}">

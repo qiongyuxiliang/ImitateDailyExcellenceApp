@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "header": "../common/header/header"
+    "header": "../common/header/header",
+    "productList": "../common/productList/productList"
   }
 }

@@ -2,13 +2,29 @@
 <view class='classify'>
   <view class='opacityHeight'></view>
 
-  <header id="header" scrollLeft='{{scrollLeft}}' swiperNav='{{swiperNav}}' bind:getSelector="onGetSelector" bind:isScrollFun="isScrollFun"></header>
+  <header id="header" scrollLeft='{{scrollLeft}}' swiperNav='{{swiperNav}}' bind:getSelector="onGetSelector" bind:isScrollFun="isScrollFun" ></header>
   <view class='left_banner'>
-   <view wx:for="{{leftBarList}}" wx:key="{{index}}" data-index="{{index}}" class="left_baner_item {{index==selected?'selected':''}}" bindtap='selectItem' >
-     <text class='left_baner_item_text'>{{item.name}}</text>    
-   </view>
+    <view wx:for="{{leftBarList}}" wx:key="{{index}}" data-index="{{index}}" data-internalId="{{item.internalId}}" class="left_baner_item {{index==selected?'selected':''}}" bindtap='selectItem'>
+      <text class='left_baner_item_text'>{{item.name}}</text>
+    </view>
   </view>
   <view class='right_detail'>
-2222
+    <view wx:for="{{rigthDetailProducts}}" wx:key="{{index}}">
+      <view wx:if="{{item.titleInfo.title}}">{{item.titleInfo.title}}</view>
+      <view wx:if="{{item.normalProducts}}" class='right_detail_list'>
+        <view class='right_detail_image_container'>
+          <image src="{{item.normalProducts.image}}" mode="widthFix" class='right_detail_image'></image>
+        </view>
+        <view class='right_detail_text_container'>
+          <text class='right_detail_name'>{{item.normalProducts.name}}</text>
+          <text class='right_detail_subtitle'>{{item.normalProducts.subtitle}}</text>
+          <view class='right_detail_price'>
+            <view class='right_detail_vipPrice' wx:if="{{item.normalProducts.pricePro.vip.price}}">￥{{item.normalProducts.pricePro.vip.price/100}}</view>
+                        <view class='right_detail_vipPrice' wx:else="{{!item.normalProducts.pricePro.vip.price}}"></view>
+            <view class='right_detail_noVipPrice {{item.normalProducts.pricePro.vip.price?"":"right_detail_vipPrice"}}'>￥{{item.normalProducts.pricePro.noVip.price/100}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
   </view>
 </view>

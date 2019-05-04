@@ -30,6 +30,10 @@ Component({
       type: Boolean,
       value: true,
     },
+    isFirstPage:{
+      type:Boolean,
+      value:false,
+    },
     swiperNav: {
       type: Object,
       value: {
@@ -73,6 +77,7 @@ Component({
     isScrollToRightBase: false,
     isScroll: true,
     menuDetail: false,
+    isFirstPage:false,
     swiperNav: {
       cousedis: 0,
       arr: [{
