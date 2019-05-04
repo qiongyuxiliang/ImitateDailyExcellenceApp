@@ -1,0 +1,48 @@
+<!--pages/productDetail/productDetail.wxml-->
+<view class='product_detail_outer'>
+  <view class='product_detail_header'>
+    <text class='product_detail_text'>商品升级</text>
+    <image src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAAXNSR0IArs4c6QAAAntJREFUWAntmT9Lw0AYxpvWTtVFUBCc+4dApTiImy1O6jfQTcHN0Q/h6OifTT+CTqL1E3QKLZ0FB8GphUJp6/PUvsc1TVWaXFIhB+3dvbnL+7unb5PLm0QiLrEC/1sBy40/GAysQqFw0u/3jy3LstFfdI9B/6HZbB542BPZbPYB9j2vY7/Z4K8Ff04ymbyt1+s36A/cc5K6AaBr+Xz+CbBXsG9NgdWnBNoe+duif3KQx+1AKYzBFgehrmDQG1Z5jhVWsdJ39yRTfdu2l3u93iGAL+kD/p8bjcaurvSCOGcYCGw6nd5wHOdTjoVVp1KphW63eyr+yEMu9K/FpkKCMUsjlY0CtlgsrnY6nWcg2Pgwjs/II1xssyhgyM6B/BmqrMMspVJpRYfNZDJlqH1PBuESHhUSkH94NQgzZglB2Ha7/YLmUFnC1mq1Dx7DFSchXOyzKIW/u+F+/wQ7jSQy4FlguYhIgGeFjQTYD2zowH5hQwUOAjY04KBgQwEOEtY4cNCwRoFNwBoDzuVyS9Nut3Tqpxi5cWDDsgmoib2BH1CZawQYG6hXbA/LAN+WjYw49Fur3ZrfE+nzAcpnsapum7H9iHljz3VGgGeEm5iGB919t9FISLidBNmPgYNU0+tcscJeqgRpm2uFmfYapb7Umuf6sgbKiRzdXCusZNUaMbAmhpGmUhj3/xY9eKU4jXj+5aTCIVwyXAEjJeTQiHpHDkZZC4dwCYsCxnbwlkZkCy+Yp5UBUdT0Tw76Fi7hmKuENsOAyo5g1xEOEwltBcwVcAIG32FSRVYUVU1YqHvkzqaOARMOsH95KWNkHfyDMWYZBgD1fCljxHF8Uk2BL8xJSqngKBzOAAAAAElFTkSuQmCC'
+      mode='widthFix' class='product_detail_image'></image>
+  </view>
+  <view class='product_detail_content'>
+    <view class='product_detail_lunbo'>
+      <carousel imgUrls="{{products.images}}" autoplay="{{autoplay}} " interval="{{interval}} " duration="{{duration}} " imgUrlLength="{{products.images.length}} "></carousel>
+
+    </view>
+    <view>
+      <view class="product_detail_name">
+        {{products.subtitle}}
+
+      </view>
+      <view class="product_detail_subtitle">
+        {{products.name}}
+
+      </view>
+    </view>
+
+    <view class='product_detail_aboutPrice'>
+      <view class='product_detail_price'>
+        ￥{{products.vip_price/100}}
+      </view>
+      <view class='product_detail_alreadysale'>
+        已售{{products.sales_volume}}
+      </view>
+    </view>
+
+    <view class='tags' style='margin-top:500px;'>
+      <text></text>
+      <text></text>
+      <text></text>
+    </view>
+
+    <view class='product_detail_share'>
+      <image></image>
+    </view>
+    <view class='product_detail_alreadyshare'></view>
+  </view>
+  <view class='product_detail_bottom'>
+    <image src='https://static-as.missfresh.cn/frontend/item/static/img/shop-icon.03511f0.png' mode='widthFix' class='bottom_image'></image>
+    <text class='bottom_text'>加入购物车</text>
+  </view>
+</view>
