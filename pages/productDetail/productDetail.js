@@ -30,6 +30,17 @@ Page({
       }
 
     })
+    // 获取推荐商品的数据
+    wx.request({
+      url: 'https://as-vip.missfresh.cn/as/item/getReSkus?device_id=05ae5c20-64b2-11e9-964c-65a516be538f&env=web&platform=web&uuid=05ae5c20-64b2-11e9-964c-65a516be538f&version=8.7.0&fromSource=zhuye&screen_height=411&screen_width=731',
+      method:'post',
+      data: { "sku": options.productId, "from": "product" },
+      success(res){
+        console.log(res)
+
+      }
+
+    })
 
   },
 

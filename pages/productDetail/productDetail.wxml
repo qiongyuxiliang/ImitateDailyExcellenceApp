@@ -1,7 +1,7 @@
 <!--pages/productDetail/productDetail.wxml-->
 <view class='product_detail_outer'>
   <view class='product_detail_header'>
-    <text class='product_detail_text'>商品升级</text>
+    <text class='product_detail_text'>商品中心</text>
     <image src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAAXNSR0IArs4c6QAAAntJREFUWAntmT9Lw0AYxpvWTtVFUBCc+4dApTiImy1O6jfQTcHN0Q/h6OifTT+CTqL1E3QKLZ0FB8GphUJp6/PUvsc1TVWaXFIhB+3dvbnL+7unb5PLm0QiLrEC/1sBy40/GAysQqFw0u/3jy3LstFfdI9B/6HZbB542BPZbPYB9j2vY7/Z4K8Ff04ymbyt1+s36A/cc5K6AaBr+Xz+CbBXsG9NgdWnBNoe+duif3KQx+1AKYzBFgehrmDQG1Z5jhVWsdJ39yRTfdu2l3u93iGAL+kD/p8bjcaurvSCOGcYCGw6nd5wHOdTjoVVp1KphW63eyr+yEMu9K/FpkKCMUsjlY0CtlgsrnY6nWcg2Pgwjs/II1xssyhgyM6B/BmqrMMspVJpRYfNZDJlqH1PBuESHhUSkH94NQgzZglB2Ha7/YLmUFnC1mq1Dx7DFSchXOyzKIW/u+F+/wQ7jSQy4FlguYhIgGeFjQTYD2zowH5hQwUOAjY04KBgQwEOEtY4cNCwRoFNwBoDzuVyS9Nut3Tqpxi5cWDDsgmoib2BH1CZawQYG6hXbA/LAN+WjYw49Fur3ZrfE+nzAcpnsapum7H9iHljz3VGgGeEm5iGB919t9FISLidBNmPgYNU0+tcscJeqgRpm2uFmfYapb7Umuf6sgbKiRzdXCusZNUaMbAmhpGmUhj3/xY9eKU4jXj+5aTCIVwyXAEjJeTQiHpHDkZZC4dwCYsCxnbwlkZkCy+Yp5UBUdT0Tw76Fi7hmKuENsOAyo5g1xEOEwltBcwVcAIG32FSRVYUVU1YqHvkzqaOARMOsH95KWNkHfyDMWYZBgD1fCljxHF8Uk2BL8xJSqngKBzOAAAAAElFTkSuQmCC'
       mode='widthFix' class='product_detail_image'></image>
   </view>
@@ -30,16 +30,85 @@
       </view>
     </view>
 
-    <view class='tags' style='margin-top:500px;'>
-      <text></text>
-      <text></text>
-      <text></text>
+    <view class='tags'>
+      <view class='tags_item'>
+        <view class='dot'></view>
+        <text class='tags_text'>产地{{products.country}}</text>
+      </view>
+      <view class='tags_item'>
+        <view class='dot'></view>
+        <text class='tags_text'>{{products.delivery_mode_name}}</text>
+      </view>
+      <view class='tags_item'>
+        <view class='dot'></view>
+        <text class='tags_text'>{{products.promotion[0]}}</text>
+      </view>
+    </view>
+
+    <view class='discounts'>
+      <view class='discounts_top'>
+        <text class='discounts_name'>优惠</text>
+        <text class='discounts_detail'>详情></text>
+      </view>
+      <view class='purchase_limitation'>
+        <image src='https://j-image.missfresh.cn/img_20181107153704134.png' mode='widthFix' class='purchase_limitation_image'></image>
+        <text class='purchase_limitation_text'>{{products.promotionShow[0].value[0]}}</text>
+      </view>
     </view>
 
     <view class='product_detail_share'>
-      <image></image>
+      <image src="https://j-image.missfresh.cn/img_20171029215450695.png" mode='widthFix' class="product_detail_share_image"></image>
+      <view class='product_detail_share_text'>{{products.product_share_info_v2.product_integarl_text}}</view>
+      <image src='https://static-as.missfresh.cn/frontend/item/static/img/integral-help-ins.1e2a6de.png' mode='widthFix' class="product_detail_share_image detail"></image>
+      <view class='go_to_share'>去分享></view>
     </view>
-    <view class='product_detail_alreadyshare'></view>
+    <view class='product_detail_alreadyshare'>
+      <text class='product_detail_alreadyshare_text'>{{products.product_share_info_v2.share_product_text}}</text>
+    </view>
+
+    <view class='peace_fingerprints'>
+      <view class='discounts_top'>
+        <text class='discounts_name'>安心指纹</text>
+        <text class='discounts_detail'>点击查看></text>
+      </view>
+      <view class='peace_fingerprints_text_iamge_outer'>
+        <image src='https://image.missfresh.cn/3acaea400d1d4e4485fb4a8df941373d.png' mode='widthFix' class='peace_fingerprints_image'></image>
+        <view class='peace_fingerprints_text'>经营证件</view>
+      </view>
+
+    </view>
+    <view class='discounts_top' >
+      <text class='discounts_name'>亮点</text>
+      <text class='discounts_detail'></text>
+    </view>
+    <view class='product_detail' style='margin-bottom:150px'>
+     <view class='product_detail_description'>
+     <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAYAAACaq43EAAAAAXNSR0IArs4c6QAAAbBJREFUSA2Vlb9Lw0AUx3NnyNBOWQKhdhIHNxHUUURwdBBFwTo49L+yo+AmqIPgj0Uc/Ac61LFp6+haMMTvC024PC/NvYPy7n3z7vPN3eWuymNtPB5/Qtox5Jtut9szcqduE0ebFBSvIzdNPa31o1nj0nfhVIwBrcxMKfXbarWeXMxYTSOHG18wwHsYhj9Mc0kbOaXxbDbbBnGNUcXL7MopjdM0PWOmXpZlD1xryl05uTEMFIAVY+zvCF/zV5OR+VzCyY0nk8kuBq2aEPTFs5VwihkfM1Na5n6SJPc4Gn30yy3hdWaOOmcOLbEHgxEG0Rm2Niz7axAEvSiKvq0FC1HC0XTYl5kSE88P5vP5LWL+ojZzKUdjNkc2kEXbm06nVxY9l6Qc2rvTOhjXMeN/e2jUiDgasA1j8NIuarfqCqQcmnFQB7PobYtWSCIO7fFbMbIponZYVyPl4F9P39XBuA74NdeKXMpR2JsV3DjPiPsFxBZh+tLpdA4RM9tzKYeWOvV9/xzxwwYkjUxxgVzWmS5qRJzyQsAbKzqniCf4bQLWhtEQSziI43iwzJSMi+bK+QMInPrVvAF7kgAAAABJRU5ErkJggg==" mode='widthFix' class='quote'></image>
+     <view>
+     <view wx:for="{{products.description}}" wx:key="{{index}}">
+     {{item}}
+     </view>
+     </view>
+     
+     <view>
+     </view>
+     </view>
+    </view>
+<!-- 推荐商品 -->
+    <view class='recommend_product'>
+    <scroll-view>
+    <view wx:for="{{}}"></view>
+    </scroll-view>
+    </view>
+  </view>
+  <view class='open_vip'>
+    <image src='https://j-image.missfresh.cn/mis_img_20181206152947789.png?mryxw=99&mryxh=48' mode='widthFix' class='open_vip_image'></image>
+    <view class='open_vip_upright'></view>
+    <view class='open_vip_text'><!--
+    -->立即
+开通<!--
+    --></view>
+    <view class='open_vip_triangle'></view>
   </view>
   <view class='product_detail_bottom'>
     <image src='https://static-as.missfresh.cn/frontend/item/static/img/shop-icon.03511f0.png' mode='widthFix' class='bottom_image'></image>
