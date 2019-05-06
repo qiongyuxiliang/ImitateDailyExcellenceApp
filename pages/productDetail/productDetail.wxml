@@ -97,7 +97,7 @@
 <!-- 推荐商品 -->
     <view class='recommend_product'>
     <scroll-view>
-    <view wx:for="{{}}"></view>
+    <!-- <view wx:for="{{}}"></view> -->
     </scroll-view>
     </view>
   </view>

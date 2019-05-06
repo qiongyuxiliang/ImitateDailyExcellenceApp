@@ -1,4 +1,5 @@
 <!--pages/clssify/classify.wxml-->
+<loading isLoading="{{isLoading}}"></loading >
 <view class='classify'>
   <view class='opacityHeight'></view>
 

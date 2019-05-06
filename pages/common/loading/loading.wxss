@@ -1,0 +1,23 @@
+/* pages/common/loading/loading.wxss */
+.loading{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: white;
+  z-index: 1000000;
+  overflow-y: hidden;
+}
+.loadingImage{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 30%;
+  background: white;
+  z-index: 1000000;
+  overflow-y: hidden;
+}

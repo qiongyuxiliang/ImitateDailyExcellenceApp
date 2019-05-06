@@ -1,9 +1,12 @@
 {
   "pages": [
+    "pages/find/find",
     "pages/clssify/classify",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/productDetail/productDetail"
+    "pages/productDetail/productDetail",
+    
+    "pages/buyCart/buyCart"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -28,6 +31,18 @@
         "selectedIconPath": "./images/classifySelected.png"
       },
       {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "./images/find.png",
+        "selectedIconPath": "./images/findSelected.png"
+      },
+      {
+        "pagePath": "pages/buyCart/buyCart",
+        "text": "购物车",
+        "iconPath": "./images/buy.png",
+        "selectedIconPath": "./images/buySelected.png"
+      },
+      {
         "pagePath": "pages/logs/logs",
         "text": "个人中心",
         "iconPath": "./images/wode.png",
@@ -41,7 +56,8 @@
   },
   "usingComponents": {
     "mask": "./pages/common/mask/mask",
-    "floatImage": "./pages/common/floatImage/floatImage"
+    "floatImage": "./pages/common/floatImage/floatImage",
+    "loading": "./pages/common/loading/loading"
   },
   "sitemapLocation": "sitemap.json"
 }

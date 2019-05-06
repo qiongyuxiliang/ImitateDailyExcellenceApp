@@ -1,0 +1,12 @@
+<!--pages/find/find.wxml-->
+<view class='find_header'>
+<image src='https://static-as.missfresh.cn/frontend/discovery/static/img/author-default.3af07f7.png' mode='widthFix' class='find_header_image'></image>
+<view class='find_item {{selectedIndex==index?"active":""}}' wx:for="{{catagoryBar}}" wx:key="{{index}}" data-index="{{index}}" bindtap='switchBar'>
+<text>{{item.name}}</text>
+</view>
+
+</view>
+
+<view class='find_content'>
+
+</view>

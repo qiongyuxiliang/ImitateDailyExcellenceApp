@@ -1,8 +1,8 @@
 <!-- index.wxml -->
+<!-- loading 组件 -->
+<loading isLoading="{{isLoading}}"></loading >
 <!-- 头部搜索与地址框 -->
-<view class="scroll {{isScroll?'':'notScroll'}}">
-  
-
+<view class="scroll {{isScroll&&!isLoading?'':'notScroll'}}">
   <header id="header" scrollLeft='{{scrollLeft}}' swiperNav='{{swiperNav}}' bind:getSelector="onGetSelector" bind:isScrollFun="isScrollFun" isFirstPage="true"></header>
 
   <view class='content '>

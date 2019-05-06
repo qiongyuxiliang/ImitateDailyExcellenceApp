@@ -5,6 +5,7 @@ const order = ['red', 'yellow', 'blue', 'green', 'red']
 const width= 120;
 Page({
   data: {
+    isLoading:true,
     isScroll:true,
     toView: 'green',
     scrollLeft: 0,
@@ -125,14 +126,28 @@ Page({
     // this.mask = this.selectComponent("#mask");
   },
   onLoad: function (options) {
+    var that = this;
+    setTimeout(function () {
+      console.log(11)
+      that.setData({
+        isLoading:false,
+      })
+    }, 1000)
     this.setData({
       imgUrlLength:this.data.imgUrls.length
     })
   },
   onGetSelector(e){
     this.setData({
+     
       page: 'p' + e.detail.theSelector,
     })
+    // setTimeout(function () {
+    //   console.log(11)
+    //   that.setData({
+    //     isLoading: false,
+    //   })
+    // }, 1000)
   },
   isScrollFun(e){
     console.log(e.detail.isScroll);
