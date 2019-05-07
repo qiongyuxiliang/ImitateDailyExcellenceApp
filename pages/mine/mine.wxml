@@ -1,0 +1,40 @@
+<!--logs.wxml-->
+
+<view class="header_container">
+  <text class="login_btn">用户登录</text>
+</view>
+<view class='content'>
+  <view class='personal_fund'>
+    <view class='personal_fund_balance about_personal_image'>
+      <view class='about_personal_fund1'>
+        <view>0</view>
+        <view>余额</view>
+      </view>
+      <image src='https://j-image.missfresh.cn/img_20180205201631182.gif' mode='widthFix' class='personal_fund_image'></image>
+    </view>
+    <view class='personal_fund_hongbao about_personal_fund'>
+      <view>0</view>
+      <view>余额</view>
+    </view>
+    <view class='personal_fund_coupon about_personal_fund'>
+      <view>0</view>
+      <view>余额</view>
+    </view>
+    <view class='personal_fund_credits about_personal_fund'>
+      <view>0</view>
+      <view>余额</view>
+    </view>
+  </view>
+
+  <!-- 会员的权益 -->
+  <view class='vip_rights'>
+    <view class='vip_rights_benefits'>会员权益</view>
+    <view class='open_vip'>开通会员></view>
+  </view>
+
+  <view class='vip_benefits_tips'>
+    成为优享会员，预计1年将为你<!--
+    --><text class='vip_benefits_tips_text'>节省1121.30元 </text>
+  </view>
+
+</view>

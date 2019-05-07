@@ -1,12 +1,31 @@
 <!--pages/find/find.wxml-->
 <view class='find_header'>
-<image src='https://static-as.missfresh.cn/frontend/discovery/static/img/author-default.3af07f7.png' mode='widthFix' class='find_header_image'></image>
-<view class='find_item {{selectedIndex==index?"active":""}}' wx:for="{{catagoryBar}}" wx:key="{{index}}" data-index="{{index}}" bindtap='switchBar'>
-<text>{{item.name}}</text>
-</view>
+  <image src='https://static-as.missfresh.cn/frontend/discovery/static/img/author-default.3af07f7.png' mode='widthFix' class='find_header_image'></image>
+  <view class='find_item {{selectedIndex==index?"active":""}}' wx:for="{{catagoryBar}}" wx:key="{{index}}" data-index="{{index}}" bindtap='switchBar'>
+    <text>{{item.name}}</text>
+  </view>
 
 </view>
 
 <view class='find_content'>
+  <view class='guss_you_like'>
+    {{detailContent.data.data[0].module.name}}
+    <text class='guss_you_like_subtitle'>|{{detailContent.data.data[0].module.subtitle}}</text>
+  </view>
+  <view class='about_discussion_food'>
+    <view class='about_discussion_food_title' wx:for='{{detailContent.data.data[0].articles}}' wx:key='{{index}}'>
+      <image src='{{item.authorPhoto}}' mode='widthFix' class='about_discussion_food_image'></image>
+      <text class='about_discussion_food_text'>{{item.nickname}}</text>
+      <image src='{{item.titlePic}}' mode='widthFix' class='about_discussion_detail_image'></image>
+      <text class='bold_title'>{{item.title}}</text>
+      <view class='read_and_share'>
+        <view class='read_of_count'>浏览 {{item.fontReadNo}}</view>
+        <view class='share'>
+          <image src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAAXNSR0IArs4c6QAAAntJREFUWAntmT9Lw0AYxpvWTtVFUBCc+4dApTiImy1O6jfQTcHN0Q/h6OifTT+CTqL1E3QKLZ0FB8GphUJp6/PUvsc1TVWaXFIhB+3dvbnL+7unb5PLm0QiLrEC/1sBy40/GAysQqFw0u/3jy3LstFfdI9B/6HZbB542BPZbPYB9j2vY7/Z4K8Ff04ymbyt1+s36A/cc5K6AaBr+Xz+CbBXsG9NgdWnBNoe+duif3KQx+1AKYzBFgehrmDQG1Z5jhVWsdJ39yRTfdu2l3u93iGAL+kD/p8bjcaurvSCOGcYCGw6nd5wHOdTjoVVp1KphW63eyr+yEMu9K/FpkKCMUsjlY0CtlgsrnY6nWcg2Pgwjs/II1xssyhgyM6B/BmqrMMspVJpRYfNZDJlqH1PBuESHhUSkH94NQgzZglB2Ha7/YLmUFnC1mq1Dx7DFSchXOyzKIW/u+F+/wQ7jSQy4FlguYhIgGeFjQTYD2zowH5hQwUOAjY04KBgQwEOEtY4cNCwRoFNwBoDzuVyS9Nut3Tqpxi5cWDDsgmoib2BH1CZawQYG6hXbA/LAN+WjYw49Fur3ZrfE+nzAcpnsapum7H9iHljz3VGgGeEm5iGB919t9FISLidBNmPgYNU0+tcscJeqgRpm2uFmfYapb7Umuf6sgbKiRzdXCusZNUaMbAmhpGmUhj3/xY9eKU4jXj+5aTCIVwyXAEjJeTQiHpHDkZZC4dwCYsCxnbwlkZkCy+Yp5UBUdT0Tw76Fi7hmKuENsOAyo5g1xEOEwltBcwVcAIG32FSRVYUVU1YqHvkzqaOARMOsH95KWNkHfyDMWYZBgD1fCljxHF8Uk2BL8xJSqngKBzOAAAAAElFTkSuQmCC'
+      mode='widthFix' class='share_image'>分享</image>
+        <text>分享</text></view>
+      </view>
+    </view>
+  </view>
 
 </view>

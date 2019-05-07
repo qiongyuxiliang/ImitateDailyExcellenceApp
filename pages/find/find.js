@@ -7,6 +7,7 @@ Page({
   data: {
     catagoryBar: [],
     selectedIndex: 0,
+    detailContent:{},
 
   },
 
@@ -28,14 +29,15 @@ Page({
       }
     })
     wx.request({
-      url: 'https://as-vip.missfresh.cn/as/disc/index/multiLis',
-      data: "device_id=05ae5c20-64b2-11e9-964c-65a516be538f&env=web&platform=web&uuid=05ae5c20-64b2-11e9-964c-65a516be538f&version=8.2.0&screen_height=411&screen_width=731&category=1",
-      method:'get',
-      header: { cookie: 'smidV2 = 201904261402081f517091fbe9f8287838d1af8c220305002d4e48d8cf0c5d0; _fmdata=M8pKfvcgmZA1uOXfFH6 % 2F36XLtKD0taCmtJBDxdGmh6prxb9hPInSI8CU8ha1EZxRRngCnLSZ0nq% 2FkA9BrpF0xxbenlcVuSraBblbPMYwTBw% 3D; __dis_home_ref_v2=1',
-        authority: 'as - vip.missfresh.cn',
-        'x-region': '{ "station_code": "MRYX|mryx_bj_dsbjs", "address_code": 110101 }'},
+      url: 'https://as-vip.missfresh.cn/as/disc/index/multiLis?device_id=05ae5c20-64b2-11e9-964c-65a516be538f&env=web&platform=web&uuid=05ae5c20-64b2-11e9-964c-65a516be538f&version=8.2.0&fromSource=zhuye&screen_height=600&screen_width=960&category=1',
+      method: 'get',
+      // data: "device_id=05ae5c20-64b2-11e9-964c-65a516be538f&env=web&platform=web&uuid=05ae5c20-64b2-11e9-964c-65a516be538f&version=8.2.0&fromSource=zhuye&screen_height=600&screen_width=960&category=1",
+     
       success(res){
         console.log(res)
+       that.setData({
+         detailContent:res
+       })
       }
     })
   },

@@ -1,11 +1,13 @@
 /* pages/find/find.wxss */
-.find_header_image{
+
+.find_header_image {
   width: 7%;
   border-radius: 50%;
-  
 }
-.find_header{
-  display: flex;flex-direction: row;
+
+.find_header {
+  display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   font-size: 14px;
@@ -13,12 +15,90 @@
   padding: 0 12px;
   border-bottom: 1px solid #f5f5f5;
 }
-.find_item{
- padding-bottom: 12px;
+
+.find_item {
+  padding-bottom: 12px;
 }
-.find_item.active{
+
+.find_item.active {
   font-size: 14px;
   color: #ff4891;
   padding-bottom: 9px;
   border-bottom: 3px solid #ff4891;
+}
+
+/* 猜你喜欢什么 */
+
+.find_content {
+  margin: 0 2.5%;
+}
+
+.guss_you_like {
+  margin: 1.3rem 0 0rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 1rem;
+  color: #474245;
+}
+
+.guss_you_like_subtitle {
+  font-size: 12px;
+  color: #969696;
+}
+
+/* 标题和头像 */
+
+.about_discussion_food_title {
+  margin-top: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.about_discussion_food_image {
+  width: 7%;
+}
+
+.about_discussion_food_text {
+  font-size: 14px;
+  color: #474245;
+}
+
+/* 发现详情主页 */
+
+.about_discussion_detail_image {
+  margin: 3% 0;
+  border-radius: 10px;
+}
+
+/* 黑色title字体 */
+
+.bold_title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  display: inline-block;
+  margin-bottom: 5%;
+}
+
+.read_and_share {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.read_of_count {
+  color: #969696;
+  font-size: 12px;
+  white-space: pre;
+}
+
+.share {
+  color: #474245;
+  font-size: 12px;
+  vertical-align: middle;
+}
+.share_image{
+  width: 40%;
+  vertical-align: middle;
+  margin-right: 6px;
 }
