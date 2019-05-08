@@ -33,8 +33,36 @@
   </view>
 
   <view class='vip_benefits_tips'>
-    成为优享会员，预计1年将为你<!--
-    --><text class='vip_benefits_tips_text'>节省1121.30元 </text>
+    成为优享会员，预计1年将为你
+    <!--
+    -->
+    <text class='vip_benefits_tips_text'>节省1121.30元 </text>
+  </view>
+
+  <!-- 会员特权 -->
+  <view class='vip_privilege'>
+    <view class='personal_fund_credits about_personal_fund' wx:for="{{vipObj.data.vip_rights_icon}}" wx:key="{{key}}">
+      <image src='{{item.path}}' mode='widthFix' class='vip_privilege_image'>{{item.name}}</image>
+      <view>{{item.name}}</view>
+    </view>
+
+  </view>
+
+  <!-- 推荐图片链接 -->
+  <view class='recommend_image_link'>
+    <view wx:for="{{vipObj.data.social_activities}}" wx:key="{{index}}" style='width:48%;'>
+      <image src='{{item.path}}' mode="widthFix" class='recommend_image_link_image'></image>
+    </view>
+
+  </view>
+
+  <!-- 关于我们和账户安全 -->
+  <view class='about_us'>
+    <view class='about_us_item' wx:for="{{aboutMe}}" wx:key="{{index}}">
+       <text>{{item.name}}</text>
+       <text class='arrow'></text>
+    </view>
+
   </view>
 
 </view>

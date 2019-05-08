@@ -12,6 +12,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.request({
+      url: 'https://as-vip.missfresh.cn/as/item/getReSkus?device_id=05ae5c20-64b2-11e9-964c-65a516be538f&env=web&platform=web&uuid=05ae5c20-64b2-11e9-964c-65a516be538f&version=8.8.0&fromSource=zhuye&screen_height=360&screen_width=640',
+      method:'post',
+      data: '{ "from": "cart" }',
+      header:{
+        'x-region': { "station_code": "MRYX|mryx_bj_dsbjs", "delivery_type": 1, "chrome_type": 0, "address_code":110101 },
+        'cookie': 'smidV2=201904261402081f517091fbe9f8287838d1af8c220305002d4e48d8cf0c5d0; _fmdata=M8pKfvcgmZA1uOXfFH6%2F36XLtKD0taCmtJBDxdGmh6prxb9hPInSI8CU8ha1EZxRmuiWho5GMYwT2G7mJRgTdF5E5eqGv3tMiYc8DLlnLGk%3D'
+      },
+      success(res){
+        console.log(res)
+      }
+
+    })
 
   },
 
@@ -64,3 +77,5 @@ Page({
 
   }
 })
+// 数组随机排序
+// (arr) => arr.slice().sort(() => Math.random() - 0.5)

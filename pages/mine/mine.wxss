@@ -79,3 +79,48 @@
     font-size: 0.75rem;
     margin: 0.5rem 0 0.5rem 0;
 }
+.vip_benefits_tips_text{
+  color: #ff4891;
+}
+/* vip特权 */
+.vip_privilege{
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.75rem;
+  color: #474245;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+}
+.vip_privilege_image{
+  width: 2rem;
+}
+/* 商品图片链接推荐 */
+.recommend_image_link{
+  display: flex;
+  flex-wrap: wrap;
+   flex-direction: row;
+   justify-content: space-around
+}
+.recommend_image_link_image{
+  width: 100%;
+}
+.about_us_item{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+      border-bottom: 0.0625rem solid #f0f0f0;
+    color: #262626;
+    font-size: 0.9375rem;
+}
+.arrow{
+   display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    top: 1.5625rem;
+    right: 0;
+    border-bottom: 0.0625rem solid #ccc;
+    border-right: 0.0625rem solid #ccc;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
