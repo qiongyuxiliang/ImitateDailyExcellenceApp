@@ -41,5 +41,10 @@ Page({
       }
     })
  
+  },
+  login:function(){
+    wx.redirectTo({
+      url: '../login/login',
+    })
   }
 })

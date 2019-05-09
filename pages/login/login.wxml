@@ -1,0 +1,20 @@
+<!--pages/login/login.wxml-->
+<view class='login_container'>
+  <view class='phone_input'>
+    <input type='number' confirm-type='done' bindblur='bindblur' class='login_phone' bindinput="bindinput" placeholder='请输入手机号'>
+    </input>
+    <text class='not_valid_phone_number' wx:if='{{!isPhoneValid}}'>手机格式不正确</text>
+    <text class='not_valid_phone_number' wx:if='{{isPhoneValid}}'>语音验证码</text>
+  </view>
+  <view class='phone_input valid_num_input'>
+    <input type='number' confirm-type='done' bindblur='bindblur' class='login_phone valid_num' bindinput="bindinput" placeholder='输入验证码'>
+    <text class='not_valid_phone_number' wx:if='{{isValidNum}}'>验证码不正确</text>
+    </input>
+  </view>
+<!-- 协议 -->
+   <radio checked='{{false}}' class='radio' color="#ff4891">我已认真阅读、理解并同意
+      <text class='protocal'>《每日优鲜用户协议》</text>及
+      <text class='protocal'>《每日优鲜隐私策略》</text>
+   </radio>
+   <button class='login_btn'>登录</button>
+</view>

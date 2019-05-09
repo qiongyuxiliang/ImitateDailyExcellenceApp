@@ -1,0 +1,5 @@
+<!--pages/common/loadingFind/loadingFind.wxml-->
+<!--pages/common/loading/loading.wxml-->
+<view class='loading' wx:if="{{isLoading}}">
+  <image src='https://static-as.missfresh.cn/frontend/discovery/static/img/loading-gif-vip.52244d7.gif' mode='widthFix' class='loadingImage'></image>
+</view>

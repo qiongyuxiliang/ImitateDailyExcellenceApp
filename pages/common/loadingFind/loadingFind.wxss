@@ -1,3 +1,4 @@
+/* pages/common/loadingFind/loadingFind.wxss */
 /* pages/common/loading/loading.wxss */
 .loading{
   position: absolute;
@@ -13,8 +14,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 0;
-  bottom: 0;
+  top: 10%;
   margin: auto;
   width: 30%;
   background: white;

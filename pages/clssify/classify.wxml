@@ -12,7 +12,7 @@
   <view class='right_detail'>
     <!-- 头部的切换栏 -->
     <view class='pull_down'>
-      <image class='pull_down_image' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAZtJREFUWAntlb1KxTAcxW9blC7dxV1QB1cd9QF0UkGcuvQD30AfQ6gtFYq4FQd1cPVOvoCLvoFL6drLhdbzBwOxtR9pCi4JhKTpycnvnv7bO5upphJQCagEVAIqgWkSqKpKm8ZJzKVxaJqmRpZld7A5QX8zTfPMtu0vMdu/1WEYbpRlea9p2jYU177vX9WVen0hz/NDpHOOvoq+XxTFa5Ika3Wd6PUPzBz7duFroV/GcbxT92kAQbDkRdi4KQvFwazz3kir4q9p3gByHOcF64+8UAaqDQaP7cZ13Xf+HJo3gCCsDMM4xfjMi8dAdcDcep53wfuzeaOo2Y0oilYQ6QNAjtgajQD9QKEf9BV6D4xDP5z3ZfNWIBKMhRoLQ2d2Ao2BkoEZBCQCJQszGGgI1GKxsFBzc2h/vdqoFSrg1pohb771PjJe3FFTnyh+C1opGDpLCIg2tEHRPb6JJsP2CgPRxj6osTDkPQqoC0oGhnwbX2paHNLw2V/qun4MgCemxzwWKWC2b/IxCII9/HNvTW6sDFUCKgGVwD8k8A1I7BVK4WrKaAAAAABJRU5ErkJggg=="
+      <image class='pull_down_image image' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAZtJREFUWAntlb1KxTAcxW9blC7dxV1QB1cd9QF0UkGcuvQD30AfQ6gtFYq4FQd1cPVOvoCLvoFL6drLhdbzBwOxtR9pCi4JhKTpycnvnv7bO5upphJQCagEVAIqgWkSqKpKm8ZJzKVxaJqmRpZld7A5QX8zTfPMtu0vMdu/1WEYbpRlea9p2jYU177vX9WVen0hz/NDpHOOvoq+XxTFa5Ika3Wd6PUPzBz7duFroV/GcbxT92kAQbDkRdi4KQvFwazz3kir4q9p3gByHOcF64+8UAaqDQaP7cZ13Xf+HJo3gCCsDMM4xfjMi8dAdcDcep53wfuzeaOo2Y0oilYQ6QNAjtgajQD9QKEf9BV6D4xDP5z3ZfNWIBKMhRoLQ2d2Ao2BkoEZBCQCJQszGGgI1GKxsFBzc2h/vdqoFSrg1pohb771PjJe3FFTnyh+C1opGDpLCIg2tEHRPb6JJsP2CgPRxj6osTDkPQqoC0oGhnwbX2paHNLw2V/qun4MgCemxzwWKWC2b/IxCII9/HNvTW6sDFUCKgGVwD8k8A1I7BVK4WrKaAAAAABJRU5ErkJggg=="
         mode="widthFix"></image>
     </view>
     <scroll-view class='right_detail_scroll' scroll-x>
@@ -23,6 +23,7 @@
       <view wx:if="{{item.normalProducts}}" class='right_detail_list'>
         <view class='right_detail_image_container'>
           <image src="{{item.normalProducts.image}}" mode="widthFix" class='right_detail_image'></image>
+          <view wx:if="{{item.normalProducts.promotionTag.name}}" class='tags'>{{item.normalProducts.promotionTag.name}}</view>
         </view>
         <view class='right_detail_text_container'>
           <text class='right_detail_name'>{{item.normalProducts.name}}</text>

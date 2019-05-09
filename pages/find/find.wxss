@@ -66,8 +66,9 @@
 /* 发现详情主页 */
 
 .about_discussion_detail_image {
-  margin: 3% 0;
+  margin: 3% auto;
   border-radius: 10px;
+  width: 100%;
 }
 
 /* 黑色title字体 */

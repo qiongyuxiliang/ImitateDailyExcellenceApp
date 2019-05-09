@@ -1,0 +1,57 @@
+/* pages/login/login.wxss */
+
+page {
+  overflow-y: hidden;
+}
+
+.login_container {
+  margin: 5rem 3%;
+}
+
+.phone_input {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.0625rem solid #e6e6e6;
+  padding-bottom: 0.3rem;
+}
+
+.login_phone {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #262626;
+}
+
+.not_valid_phone_number {
+  font-size: 0.75rem;
+  color: #ff4891;
+  padding: 0.3125rem 0.3125rem 0.25rem;
+  border: 0.0625rem solid #ff4891;
+  border-radius: 0.3125rem;
+  background: #fff;
+}
+
+.valid_num {
+  margin-top: 1rem;
+}
+
+.valid_num_input {
+  margin-bottom: 1.3rem;
+}
+
+.radio {
+  padding-left: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #969696;
+}
+
+.login_btn {
+  margin-top: 1.3rem;
+  background: #b8b3ba;
+  width: 94%;
+  color: #fff;
+  font-size: 1rem;
+}
+.protocal{
+  color: #ff4891;
+}

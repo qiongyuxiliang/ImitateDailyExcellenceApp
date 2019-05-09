@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "我的"
+  "usingComponents": {
+      "loadingFind": "../common/loadingFind/loadingFind"
+  },
+  "navigationBarTitleText": "发现"
+
 }

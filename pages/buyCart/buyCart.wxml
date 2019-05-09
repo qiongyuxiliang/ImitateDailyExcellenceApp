@@ -8,13 +8,28 @@
   <!-- 內容區域 -->
   <view class='content_cart'>
     <view class='buy_cart'>您还没有添加任何商品</view>
-      <!-- 推荐商品 -->
-  <view class='recommend_goods'>
-    <view class='recommend_goods_text'>推荐商品</view>
-    <view class='recommend_goods_list'>
-     <view wx:for="{{}}"></view>
+    <!-- 推荐商品 -->
+    <view class='recommend_goods'>
+      <view class='recommend_goods_text'>推荐商品</view>
+      <view class='recommend_goods_list'>
+        <view wx:for="{{recommendObj.data.data.products}}" wx:key="{{index}}" class='recommend_goods_item'>
+          <image src='{{item.image}}' mode='widthFix' class='recommend_goods_item_image image'></image>
+          <view class='recommend_goods_name'>{{item.name}}</view>
+          <view class='recommend_goods_subtitle'>{{item.subtitle}}</view>
+          <view class='recommend_goods_item_price'>
+            <view wx:if="{{item.pricePro.vip}}" class='price_contaibner'>
+              <view class='noVip_price'>￥{{item.pricePro.noVip.price/100}}</view>
+              <view class='vip_price'>￥{{item.pricePro.vip.price/100}}</view>
+            </view>
+            <view wx:else class='price_contaibner'>
+              <view class='space_occupy'>zhan </view>
+              <view class='single_price'>￥{{item.pricePro.noVip.price/100}}</view>
+            </view>
+            <image src='{{item.cart_image}}' class='item_cart_image image' mode='widthFix'></image>
+          </view>
+        </view>
+      </view>
     </view>
-  </view>
   </view>
 
 

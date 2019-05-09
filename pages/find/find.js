@@ -8,6 +8,7 @@ Page({
     catagoryBar: [],
     selectedIndex: 0,
     detailContent:{},
+    isLoading:true,
 
   },
 
@@ -22,8 +23,11 @@ Page({
       method: 'get',
      
       success(res) {
+        // 判断逻辑  是否出错  等等
+
         that.setData({
-          catagoryBar: res.data.data.categorys
+          catagoryBar: res.data.data.categorys,
+          isLoading: false,
         })
         console.log(res.data.data.categorys)
       }

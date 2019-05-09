@@ -1,3 +1,6 @@
 /**app.wxss**/
 /* 全局css样式 */
+image{
+  height: auto;
+}
 

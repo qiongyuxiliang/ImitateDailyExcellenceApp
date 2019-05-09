@@ -62,11 +62,91 @@
   background-position-y: 7.375rem;
   margin-top: 0.7rem;
 }
+
 /* 推荐商品 */
-.recommend_goods{
+
+.recommend_goods {
   margin: 1rem 0.5rem;
 }
-.recommend_goods_text{
-    font-size: 1.25rem;
-    color: #474245;
+
+.recommend_goods_text {
+  font-size: 1.25rem;
+  color: #474245;
+  margin-bottom: 3%;
+}
+
+/* 推荐商品列表 */
+
+.recommend_goods_list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.recommend_goods_item {
+  width: 48.5%;
+  background: white;
+  margin-bottom: 3%;
+  border-radius: 8px;
+}
+
+.recommend_goods_item_image {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+}
+
+.item_cart_image {
+  width: 30%;
+}
+
+.recommend_goods_name {
+  margin: 0 0.625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.875rem;
+  color: #474245;
+  line-height: 1.25rem;
+}
+
+.recommend_goods_subtitle {
+  margin: 0.0625rem 0.625rem 0;
+  font-size: 0.75rem;
+  color: #969696;
+  line-height: 1.0625rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recommend_goods_item_price {
+  margin: 1rem 0.3rem 0.4rem 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.noVip_price {
+  color: rgb(255, 72, 145);
+  font-size: 0.75rem;
+  line-height: 1.0625rem;
+}
+
+.single_price {
+  color: rgb(255, 72, 145);
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.vip_price {
+  color: rgb(150, 150, 150);
+  font-size: 0.9375rem;
+  line-height: 1rem;
+  font-weight: 500;
+  margin-top: 0.0625rem;
+}
+
+.space_occupy {
+  color: white;
 }

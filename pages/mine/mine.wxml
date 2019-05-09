@@ -1,7 +1,7 @@
 <!--logs.wxml-->
 
 <view class="header_container">
-  <text class="login_btn">用户登录</text>
+  <text class="login_btn" bindtap='login'>用户登录</text>
 </view>
 <view class='content'>
   <view class='personal_fund'>
