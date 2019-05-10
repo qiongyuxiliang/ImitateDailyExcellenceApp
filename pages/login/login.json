@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "popup": "../common/popup/popup"
+  },
   "navigationBarTitleText": "登录"
 }

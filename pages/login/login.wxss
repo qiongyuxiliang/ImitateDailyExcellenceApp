@@ -51,7 +51,27 @@ page {
   width: 94%;
   color: #fff;
   font-size: 1rem;
+  white-space: nowrap;
 }
-.protocal{
+
+.protocal {
   color: #ff4891;
+  display: inline;
+}
+
+.timer {
+  text-align: center;
+  color: #b8b3ba;
+  border-color: #b8b3ba;
+  opacity: 0.8;
+  font-size: 0.875rem;
+  width: 3.5rem;
+  padding: 0.3125rem 0.3125rem 0.25rem;
+  border-radius: 0.3125rem;
+  background: #fff;
+}
+
+/* 按钮可提交样式 */
+.login_btn.enabled{
+  background: #ff4891;
 }
