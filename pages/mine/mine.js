@@ -46,5 +46,20 @@ Page({
     wx.redirectTo({
       url: '../login/login',
     })
+  },
+  jumpTo:function(e){
+
+    switch(e.currentTarget.dataset.flag){
+      case 'order':
+        wx.navigateTo({
+          url: '../order/order',
+        });
+        break;
+    } 
+  },
+  investMoney:function(e){
+    wx.redirectTo({
+      url: '../promotionVip/promotionVip',
+    })
   }
 })

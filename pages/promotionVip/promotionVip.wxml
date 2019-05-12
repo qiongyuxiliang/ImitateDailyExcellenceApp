@@ -1,0 +1,6 @@
+<!--pages/promotionVip/promotionVip.wxml-->
+<view class='user_info'>
+<view class='user_bg'>
+<image src='https://j-image.missfresh.cn/img_20181022141033144.png' mode='widthFix' class='user_bg_image'></image>
+</view>
+</view>

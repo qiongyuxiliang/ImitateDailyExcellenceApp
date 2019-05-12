@@ -1,0 +1,11 @@
+/* pages/promotionVip/promotionVip.wxss */
+.user_bg{
+  position: relative;
+  height: 40px;
+  overflow-y: hidden;
+}
+.user_bg_image{
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}

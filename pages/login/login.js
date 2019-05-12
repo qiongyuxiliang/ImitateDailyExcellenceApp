@@ -148,10 +148,11 @@ Page({
   },
   // 验证码输入
   putValidNum:function(e){
-    this.btnActived();
+   
     this.setData({
       validNum:e.detail.value,
     })
+    this.btnActived();
 
   },
   btnActived:function(){

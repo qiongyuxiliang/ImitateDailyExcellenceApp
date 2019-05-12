@@ -4,10 +4,10 @@
     "pages/find/find",
     "pages/clssify/classify",
     "pages/buyCart/buyCart",
-   
     "pages/index/index",
     "pages/productDetail/productDetail",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/promotionVip/promotionVip"
   ],
   "window": {
     "backgroundTextStyle": "light",

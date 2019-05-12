@@ -1,7 +1,7 @@
 <!--pages/login/login.wxml-->
 <view class='login_container'>
   <view class='phone_input'>
-    <input type='number' confirm-type='done' bindblur='bindblur' bindfocus='bindfocus' class='login_phone' placeholder='请输入手机号'>
+    <input type='number' confirm-type='done' bindinput='bindblur' bindfocus='bindfocus' class='login_phone' placeholder='请输入手机号'>
     </input>
     <text class='not_valid_phone_number' wx:if='{{!isPhoneValid&&!gutter}}'>手机格式不正确</text>
     <text class='not_valid_phone_number' wx:if='{{isPhoneValid&&!gutter}}' bindtap='showPopup'>语音验证码</text>
@@ -19,6 +19,7 @@
       --><text class='protocal'>《每日优鲜隐私策略》</text>
    </text>
    <button class='login_btn {{isactived ?"enabled":""}}' bindtap='login' disabled='{{!isactived}}'>登录</button>
+   <view class='phone_login_reason'>为方便您及时查询订单信息，需要验证您的手机号来登录</view>
 </view>
  <popup id='popup' 
       title='获取语音验证码' 

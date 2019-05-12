@@ -1,0 +1,13 @@
+<!--pages/order/order.wxml-->
+<view class='order'>
+  <view class='order_list'>
+    <view class='order_item {{tabs=="all"?"actived":""}}' data-tabs='all' bindtap='switchTabs'>全部</view>
+    <view class='order_item {{tabs=="waitPay"?"actived":""}}' data-tabs='waitPay'  bindtap='switchTabs'>待付款</view>
+    <view class='order_item  {{tabs=="waitSendGoods"?"actived":""}}'  data-tabs='waitSendGoods'  bindtap='switchTabs'>待发货</view>
+    <view class='order_item  {{tabs=="sendingGoods"?"actived":""}}'  data-tabs='sendingGoods'  bindtap='switchTabs'>配送中</view>
+    <view class='order_item  {{tabs=="waitRate"?"actived":""}}'  data-tabs='waitRate'  bindtap='switchTabs'>待评价</view>
+  </view>
+  <view class='no_buy_record'>
+  您还没有相关订单
+  </view>
+</view>

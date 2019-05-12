@@ -72,6 +72,14 @@ page {
 }
 
 /* 按钮可提交样式 */
-.login_btn.enabled{
+
+.login_btn.enabled {
   background: #ff4891;
+}
+
+.phone_login_reason {
+  text-align: center;
+  padding: 0.9375rem 0;
+  color: #969696;
+  font-size: 0.7rem;
 }

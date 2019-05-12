@@ -1,0 +1,31 @@
+/* pages/order/order.wxss */
+
+.order_list {
+  display: flex;
+  justify-content: space-around;
+  -webkit-tap-highlight-color: rgb(65, 48, 48);
+}
+
+.order_item {
+  color: #474346;
+  font-size: 0.875rem;
+  padding-bottom: 6px;
+}
+
+.order_item.actived {
+  border-bottom: 1px solid #ff4891;
+  padding-bottom: 5px;
+  color: #ff4891;
+}
+.no_buy_record{
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 11rem;
+  background: #fff url(https://static-as.missfresh.cn/frontend/user/static/img/empty.692c555.png) center no-repeat;
+  background-size: 5.625rem 5.625rem;
+  background-position-y: 5rem;
+  padding-top: 11rem;
+  font-size: 0.75rem;
+  color: #7f7f7f;
+}

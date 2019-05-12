@@ -29,7 +29,7 @@
   <!-- 会员的权益 -->
   <view class='vip_rights'>
     <view class='vip_rights_benefits'>会员权益</view>
-    <view class='open_vip'>开通会员></view>
+    <view class='open_vip' bindtap='investMoney'>开通会员></view>
   </view>
 
   <view class='vip_benefits_tips'>
@@ -58,7 +58,7 @@
 
   <!-- 关于我们和账户安全 -->
   <view class='about_us'>
-    <view class='about_us_item' wx:for="{{aboutMe}}" wx:key="{{index}}">
+    <view class='about_us_item' wx:for="{{aboutMe}}" wx:key="{{index}}" bindtap='jumpTo' data-flag='{{item.flag}}'> 
        <text>{{item.name}}</text>
        <text class='arrow'></text>
     </view>
