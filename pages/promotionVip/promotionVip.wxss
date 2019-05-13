@@ -1,11 +1,160 @@
 /* pages/promotionVip/promotionVip.wxss */
-.user_bg{
+
+.user_bg {
   position: relative;
-  height: 40px;
+  height: 4rem;
   overflow-y: hidden;
 }
-.user_bg_image{
+
+.user_bg_image {
   width: 100%;
   position: relative;
   z-index: -1;
+}
+
+.header_content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+}
+
+.portrait {
+  width: 3rem;
+  display: block;
+  border-radius: 50%;
+  margin: 0 3%;
+}
+
+.vip_flag_pic {
+  width: 20%;
+  flex-shrink: 0;
+}
+
+.about_vip {
+  display: flex;
+  align-items: center;
+}
+
+.nickname {
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  color: #fff;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vip_expired_time {
+  font-size: 0.625rem;
+  line-height: 0.875rem;
+  color: #c6c6c6;
+}
+
+.right_content {
+  width: 90%;
+  margin-right: 3%;
+  padding-right: 2.875rem;
+}
+
+/* 套餐样式 */
+
+.vip_set {
+  display: flex;
+  justify-content: space-between;
+  margin: 3% 3%;
+}
+
+.detail_vip_set {
+  color: #474245;
+  word-wrap: break-word;
+  font-size: 0.875rem;
+}
+
+.redeem_code {
+  font-size: 0.75rem;
+  color: #969696;
+}
+
+.scroll_item {
+  display: inline-block;
+  width: 31.5%;
+  height: 6.8125rem;
+  background: lightblue;
+  margin: 0 20px;
+  position: relative;
+  border-radius: 0.5rem;
+  background: #f5f5f5;
+}
+
+.scroll {
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  white-space: nowrap;
+  margin-top: 5%;
+  margin-bottom: 8%;
+}
+
+.vip_text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 3.4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.actual_class {
+  color: #474245;
+  font-size: 1.125rem;
+}
+
+.vip_name {
+  color: #474245;
+  font-size: 0.875rem;
+}
+
+.origin_class {
+  color: #969696;
+  text-decoration: line-through;
+  font-size: 0.875rem;
+}
+
+.scroll_item.actived {
+  background-image: -webkit-linear-gradient(225deg, #fcf7eb 0%, #faeccd 100%);
+  background-image: linear-gradient(-135deg, #fcf7eb 0%, #faeccd 100%);
+  color: #6b3c12;
+}
+
+.scroll_item.actived .origin_class, .scroll_item.actived .actual_class,
+.scroll_item.actived .vip_name {
+  color: #6b3c12;
+}
+
+.litte_image {
+  position: absolute;
+  top: 4%;
+  right: 8%;
+  width: 25%;
+}
+
+.need_pay {
+  margin: 0 3%;
+  font-size: 1rem;
+  padding-bottom: 0.9375rem;
+  color: #474245;
+  border-bottom: 0.0625rem solid #e6e6e6;
 }

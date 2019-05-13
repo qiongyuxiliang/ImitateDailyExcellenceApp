@@ -1,10 +1,5 @@
 /**index.wxss**/
 @import "./weui.wxss";
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-  color: transparent;
-}
 
 .content {
   height: 100%;
@@ -100,4 +95,9 @@
 .image_view{
   width: 100%;
   margin: 4% 0;
+}
+.scroll_item.actived{
+      background-image: -webkit-linear-gradient(225deg, #fcf7eb 0%, #faeccd 100%);
+    background-image: linear-gradient(-135deg, #fcf7eb 0%, #faeccd 100%);
+    color: #6b3c12;
 }
