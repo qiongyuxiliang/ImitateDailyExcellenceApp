@@ -27,13 +27,13 @@
   <view class='hot_search'>
     <view class='history_title'>
       <text>历史记录</text>
-      <view class='clear_history''>
-      <image src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAFoTx1HAAAAAXNSR0IArs4c6QAAAKBJREFUKBWVUkEOhCAMZI239W58hdlv8SC4c+Q1PINfYGsyZBaNIAc7bWemWDWGj3OucP6ElTvAZ8osfokLp38I4YtBf01OGE9gU8yEO5CtYoxLh960WQ18d6Eq4+bllroRAxtEKSWtf/SB471PpZQdeROTtfaH2ikUQRbBimInZjHYKkfFSEZwfUmeOIKrENNeR90a/0KtgX5i2mzbHs8P6yZbziMqfrAAAAAASUVORK5CYII=' mode='widthFix' class='delete_icon'></image>
+      <view class='clear_history'>
+      <image src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAFoTx1HAAAAAXNSR0IArs4c6QAAAKBJREFUKBWVUkEOhCAMZI239W58hdlv8SC4c+Q1PINfYGsyZBaNIAc7bWemWDWGj3OucP6ElTvAZ8osfokLp38I4YtBf01OGE9gU8yEO5CtYoxLh960WQ18d6Eq4+bllroRAxtEKSWtf/SB471PpZQdeROTtfaH2ikUQRbBimInZjHYKkfFSEZwfUmeOIKrENNeR90a/0KtgX5i2mzbHs8P6yZbziMqfrAAAAAASUVORK5CYII=' mode='widthFix' class='delete_icon'>记录</image>
       <text>清空历史记录</text>
       </view>
     </view>
-    <view class='search_content'>
-      <view class='search_table' wx:for="{{hotSearch}}" wx:key="{{index}}">
+    <view class='search_content '>
+      <view class='search_table ' wx:for="{{hotSearch}}" wx:key="{{index}}">
         <text>{{item}}</text>
       </view>
 
@@ -41,8 +41,8 @@
   </view>
 
   <!-- 推荐商品 -->
-  <view class='suggestion_products'>
-    <view class='suggestion_products_title'>推荐商品</view>
+  <view class='suggestion_products '>
+    <view class='suggestion_products_title '>推荐商品</view>
     <view>
       <productList products="{{products}}"></productList>
     </view>
