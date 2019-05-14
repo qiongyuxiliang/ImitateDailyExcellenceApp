@@ -23,8 +23,8 @@
   </view>
   <scroll-view scroll-x style="width: 100%" class='scroll'>
     <view wx:for="{{vipObj.data.card_details}}" wx:key="{{index}}" class='scroll_item {{index==active?"actived":""}}' data-active="{{index}}" bindtap='selectItem' data-money="{{item.card_price}}">
-      <image wx:if="{{index==active}}"src='https://static-as.missfresh.cn/frontend/user/static/img/icon_buy_member_select.718218d.png' mode='widthFix' class='litte_image'></image>
-            <image wx:if="{{index!=active}}" src='https://static-as.missfresh.cn/frontend/user/static/img/icon_buy_member_unchecked.406b1fa.png' mode='widthFix' class='litte_image'></image>
+      <image wx:if="{{index==active}}" src='https://static-as.missfresh.cn/frontend/user/static/img/icon_buy_member_select.718218d.png' mode='widthFix' class='litte_image'></image>
+      <image wx:if="{{index!=active}}" src='https://static-as.missfresh.cn/frontend/user/static/img/icon_buy_member_unchecked.406b1fa.png' mode='widthFix' class='litte_image'></image>
       <view class='vip_text'>
         <text class='vip_name'>{{item.vip_name}}</text>
         <view class='vip_price'>
@@ -38,10 +38,20 @@
   </scroll-view>
   <view class='need_pay'>需要支付：{{money}}</view>
   <view class='wxPay'>
-  <image src='https://static-as.missfresh.cn/frontend/user/static/img/icon-wx.1e691f0.png' mode='widthFix'></image>
-  <view>
-    <text class="">微信支付</text>
-    <text>亿万用户的选择，更快更安全</text>
+    <view class='wxpay_sub'>
+      <image src='https://static-as.missfresh.cn/frontend/user/static/img/icon-wx.1e691f0.png' mode='widthFix' class='weixin_image'></image>
+      <view>
+        <text class="">微信支付</text>
+        <text class='sub_instr'>亿万用户的选择，更快更安全</text>
+      </view>
+    </view>
+
+    <image src='https://static-as.missfresh.cn/frontend/user/static/img/icon_select.fc66f23.png' mode='widthFix' class='selected'></image>
   </view>
+  <view class='submit_btn'>
+    <view class='submit_btn_inner'>
+      <image src='https://static-as.missfresh.cn/frontend/user/static/img/btn_popup.085036b.png' mode='widthFix' class='submit_btn_image'></image>
+      <text class='submit_btn_text'>立即支付</text>
+    </view>
   </view>
 </view>

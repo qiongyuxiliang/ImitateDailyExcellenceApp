@@ -1,9 +1,9 @@
 /**app.wxss**/
 /* 全局css样式 */
 image{
-  height: auto;
+    background: url(//static-as.missfresh.cn/frontend/mfs3/web/static/img/default-image-product.2031e18.png) no-repeat center center;
+    background-size: 100% 100%;
 }
-
 ::-webkit-scrollbar {
   width: 0;
   height: 0;

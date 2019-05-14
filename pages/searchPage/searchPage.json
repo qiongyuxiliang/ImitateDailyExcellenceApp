@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "productList": "../common/productList/productList"
+  }
+}

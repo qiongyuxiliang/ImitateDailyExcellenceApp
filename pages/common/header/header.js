@@ -237,5 +237,10 @@ Component({
         "theSelector": theSelector,
       });
     },
+    jumpToSearchPage(){
+      wx.redirectTo({
+        url: '../../pages/searchPage/searchPage',
+      })
+    }
   }
 })

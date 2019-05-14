@@ -1,15 +1,15 @@
 <!--pages/common/productList/productList.wxml-->
-  <scroll-view scroll-y>
-    <view wx:for="{{products}}" wx:key='{{index}}' class='img_container'>
-      <image src='{{item.image}}' class='product_item_image' mode="widthFix"></image>
-      <view class='text_container'>
+<scroll-view scroll-y>
+  <view wx:for="{{products}}" wx:key='{{index}}' class='img_container'>
+    <image src='{{item.image}}' class='product_item_image' mode="widthFix"></image>
+    <view class='text_container'>
       <view class='product_name'>{{item.name}}</view>
       <view class='product_subtitle'>{{item.subtitle}}</view>
       <view wx:if="{{item.productsType.forNewUser}}" class='forNewUser_flag'>{{item.productsType.forNewUser_flag}}</view>
-      </view>
-      <view class='price_and_cart'>
-      <text class='price'>￥{{item.price}}</text>
-      <image class='product_cart' src='{{item.cart_image}}' mode="widthFix"></image>
-      </view> 
     </view>
-    </scroll-view>
+    <view class='price_and_cart'>
+      <text class='price'>￥{{item.price/100}}</text>
+      <image class='product_cart' src='{{item.cart_image}}' mode="widthFix"></image>
+    </view>
+  </view>
+</scroll-view>

@@ -1,13 +1,15 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/mine/mine",
     "pages/find/find",
     "pages/clssify/classify",
     "pages/buyCart/buyCart",
-    "pages/index/index",
+    
     "pages/productDetail/productDetail",
     "pages/login/login",
-    "pages/promotionVip/promotionVip"
+    "pages/promotionVip/promotionVip",
+    "pages/searchPage/searchPage"
   ],
   "window": {
     "backgroundTextStyle": "light",

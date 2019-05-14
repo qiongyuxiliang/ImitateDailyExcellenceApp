@@ -1,7 +1,7 @@
 /* pages/common/productList/productList.wxss */
 .img_container {
   margin: 0 2%;
-  padding: 1.375rem 0;
+  padding: 0.5rem 0;
   border-bottom: 0.0625rem solid #f5f5f5;
 }
 
@@ -25,7 +25,7 @@
   color: #969696;
 }
 .product_cart{
-  width: 8%;
+  width: 16%;
   vertical-align: middle;
 }
 .price_and_cart{
