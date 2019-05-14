@@ -5,18 +5,19 @@
 
     <image src='https://static-as.missfresh.cn/frontend/item/static/img/search-goods-back.a157fb3.png' mode='widthFix' class='search_back'></image>
     <view class='input'>
-      <input type="text" class='search' placeholder="搜索" />
+      <input type="text" class='search' placeholder="{{searchHotWord}}" bindinput='bindinput'/>
       <image src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAA5RJREFUWAntl71rU1EYxvNFDbQgGW2ho1bFDm2StohDK3WStiA4+CcUB7vUwV3QRUHa3clJTB0cLLYVIUlJXKpWVBAs6GCHEGxBIWn8PZd7y23uyc3HDZ164HDOPfd9nve573nPxw2FTspJBIJFINwufHNz8+zBwcEcuGnqYK1W6xdHOBz+RbNDXY1EIpmxsbGvGm+3tCwon8+PIuQhDqZadLKGsMXx8fH3LdpbZk0FEYFYLpd7TATm6cu+RH8FZyv0t/v6+hSZ0N7eXn+1Wr3IuxnsZhlK0KdbW56YmLhDvyK7ZsVX0NbWVmJ/f/85pJMQ/UXEo1gs9iCZTJb9iIvF4ulKpXKXiC5gF0fMem9v743h4eGSH07vGgpCRIxpei0xEP5EzBx5UWxG6H5PviURlYFjQKKYvmu0vpGKuAncfU2TI4YWLe2JEZcwwuqDxCVOtw9T3xghJTAEBeq/aDR6pRMxbmeKFPn1DmGnqCm/RDdGSKsJMWHlTFAxEiYOcYnTXqluvUf6HkGFQuEcFlraJSXwEesADzaXknpKe1kjKo8gVoeWrDa6lWarqRGpaVxc4tQ7oqSN1Vg8grDSDhwixBbYiOpwkCl7aUMtHyYak6BB23DbBAgyxgL5ZOMdHx46jyC+wjqbnB3Ygwgw4HA6PkxUHkEmo26NESHjNuPm9wgi8Q7PJrdhN/rlcvmMeBwfJk6PIIx2bMMLJkCQMR2+Nt7x4aEzCVqVFUvTWv4eRIABIjNjwy0fJiqPIDYwa7mTeLM6tU2gTsbEJU5hHR8mHo+gVCr1BcM1akJXCBOokzGbKwH2je3DSOMRJCs2xUXCW2PaFnQwGpFtDNrXkAVxwu37kUZBOo0J7zI+44jKZLPZgTb8HzEVVhzioi75nfQCNtwXENTtC9oGYqaJUmcXNAF17aRdR9yA7jPck+63kuiyka0wwlpfHg7nmonxjZBeqihSQS75ULyAQ6uLjTp6i7vRM/E2Kg2nrB6gWyS50PJvENHYQMC9dDpNGmVvw/eEqh+FSaYuX8/vPLcsyAHoAmffmQ5/FHEeIQq7tN+we8s+k2Fpf3QwaonyEjbzdH/H4/H0yMjID/d7p9+2IAfYbouYKKJegdOfx4dEInF5aGjoTz2PcdnXG3XjGRHVnp6em7SfEXepVCo9NfEemyA51zWW6bxOd5d6VVHTuLscqyA5Jre+k+znETOqqLnFnPRbicB/s0mrARHWdIQAAAAASUVORK5CYII='
         class='magnifying' mode='widthFix'></image>
     </view>
 
-    <text class='search_text'>搜索</text>
+    <text class='search_text' bindtap='searchFun'>搜索</text>
   </view>
   <!-- 热门搜索 -->
+<view  wx:if="{{!isSearch}}">
   <view class='hot_search'>
     <view class='search_title'>热门搜索</view>
     <view class='search_content'>
-      <view class='search_table' wx:for="{{hotSearch}}" wx:key="{{index}}">
+      <view class='search_table' wx:for="{{hotSearch}}" wx:key="{{index}}" bindtap='onSearchContent'>
         <text>{{item}}</text>
       </view>
 
@@ -24,25 +25,26 @@
   </view>
 
   <!-- 历史记录 -->
-  <view class='hot_search'>
+  <view class='hot_search' wx:if="{{searchHistory.length}}">
     <view class='history_title'>
-      <text>历史记录</text>
-      <view class='clear_history'>
+      <text class='search_title'>历史记录</text>
+      <view class='clear_history' bindtap='clearSearchHistory'>
       <image src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAFoTx1HAAAAAXNSR0IArs4c6QAAAKBJREFUKBWVUkEOhCAMZI239W58hdlv8SC4c+Q1PINfYGsyZBaNIAc7bWemWDWGj3OucP6ElTvAZ8osfokLp38I4YtBf01OGE9gU8yEO5CtYoxLh960WQ18d6Eq4+bllroRAxtEKSWtf/SB471PpZQdeROTtfaH2ikUQRbBimInZjHYKkfFSEZwfUmeOIKrENNeR90a/0KtgX5i2mzbHs8P6yZbziMqfrAAAAAASUVORK5CYII=' mode='widthFix' class='delete_icon'>记录</image>
       <text>清空历史记录</text>
       </view>
     </view>
     <view class='search_content '>
-      <view class='search_table ' wx:for="{{hotSearch}}" wx:key="{{index}}">
+      <view class='search_table ' wx:for="{{searchHistory}}" wx:key="{{index}}">
         <text>{{item}}</text>
       </view>
 
     </view>
   </view>
+</view>
 
   <!-- 推荐商品 -->
   <view class='suggestion_products '>
-    <view class='suggestion_products_title '>推荐商品</view>
+    <view class='suggestion_products_title'  wx:if="{{!isSearch}}">推荐商品</view>
     <view>
       <productList products="{{products}}"></productList>
     </view>

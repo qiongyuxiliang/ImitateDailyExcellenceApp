@@ -71,6 +71,7 @@ Component({
    * 组件的初始数据
    */
   data: {
+    searchHotWord:'',
     animation: '',
     width: 120,
     isScrollToLeftBase: true,
@@ -108,6 +109,22 @@ Component({
     }
   },
   ready: function() {
+    var that=this;
+    wx.request({
+      url: 'https://as-vip.missfresh.cn/as/miss/startOptional',
+      data: {"params":{},"param":{},"common":{"stationCode":"MRYX|mryx_bj_dsbjs","deliveryType":1,"addressCode":110101,"currentLng":116.41637,"currentLat":39.92855,"device_id":"b2c05f00-6843-11e9-b8f9-59469261f3f2","env":"web","platform":"web","uuid":"b2c05f00-6843-11e9-b8f9-59469261f3f2","accessToken":"QWJRV2pnK3c2WlRKYXN3eXlnVUJNOG5UTVpSU1AzdHU1dVBKSThyQ1praGVzR1hobzQ2MEZrV1E1QnlQYkhsMg==","version":"8.5.0","fromSource":"zhuye","screenHeight":640,"screenWidth":360}},
+      method:'post',
+      header:{
+        'x-region': '{ "station_code": "MRYX|mryx_bj_dsbjs", "address_code": 110101 }'
+      },
+      success(res){
+        console.log(res)
+        that.setData({
+          searchHotWord: res.data.data.searchHotWord,
+        })
+        
+      }
+    })
     this.mask = this.selectComponent("#mask");
     // 页面渲染完成
     //实例化一个动画
@@ -238,8 +255,9 @@ Component({
       });
     },
     jumpToSearchPage(){
+      var that =this;
       wx.redirectTo({
-        url: '../../pages/searchPage/searchPage',
+        url: '../../pages/searchPage/searchPage?searchHotWord=' + that.data.searchHotWord,
       })
     }
   }

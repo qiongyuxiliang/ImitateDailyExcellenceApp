@@ -9,7 +9,7 @@
       </view>
     </view>
     <view>
-      <input type="text" class='search' placeholder="搜索" bindtap='jumpToSearchPage'/>
+      <input type="text" class='search' placeholder="{{searchHotWord}}" bindtap='jumpToSearchPage'/>
     </view>
   </view>
   <!-- 面板切换栏 -->
