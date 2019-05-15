@@ -34,7 +34,7 @@
       </view>
     </view>
     <view class='search_content '>
-      <view class='search_table ' wx:for="{{searchHistory}}" wx:key="{{index}}" bindtap='onSearchContent'>
+      <view class='search_table ' wx:for="{{searchHistory}}" wx:key="{{index}}" bindtap='onSearchContent' data-type='history'>
         <text>{{item}}</text>
       </view>
 

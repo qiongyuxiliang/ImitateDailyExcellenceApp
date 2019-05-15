@@ -112,12 +112,16 @@ Page({
       })
 
     }
-    var searchHistory = wx.getStorageSync('searchHistory') || [];
-    searchHistory.unshift(this.data.searchContent);
-    wx.setStorageSync('searchHistory', searchHistory);
-    this.setData({
-      searchHistory: searchHistory
-    })
+    // 在历史记录点击链接  不增加历史记录
+    if (!e||(e&&!e.currentTarget.dataset.type)){
+      var searchHistory = wx.getStorageSync('searchHistory') || [];
+      searchHistory.unshift(this.data.searchContent);
+      wx.setStorageSync('searchHistory', searchHistory);
+      this.setData({
+        searchHistory: searchHistory
+      })
+    }
+    
     wx.request({
       url: 'https://as-vip.missfresh.cn/search/',
       data: {
