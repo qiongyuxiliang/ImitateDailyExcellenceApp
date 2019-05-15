@@ -23,7 +23,7 @@ Page({
     this.setData({
       searchHistory: searchHistory,
       searchHotWord: options.searchHotWord,
-      searchContent: options.searchHotWord,
+      // searchContent: options.searchHotWord,
     })
    
     var that = this;
@@ -96,7 +96,28 @@ Page({
   // 自定义的方法
   onSearchContent: function(e) {
     var that =this;
-    console.log(e)
+    if (e && e._relatedInfo){
+      this.setData({
+        searchContent: e._relatedInfo.anchorTargetText
+      })
+    }else{
+      this.setData({
+        searchContent: e
+      }) 
+    }
+    if (!this.data.searchContent.replace(/^\s*|\s*$/g, "")) {
+      this.setData({
+        searchContent: this.data.searchHotWord
+      })
+
+    }
+    var searchHistory = wx.getStorageSync('searchHistory') || [];
+    searchHistory.unshift(this.data.searchContent);
+    wx.setStorageSync('searchHistory', searchHistory);
+    this.setData({
+      searchHistory: searchHistory
+    })
+    console.log(e._relatedInfo.anchorTargetText)
     wx.request({
       url: 'https://as-vip.missfresh.cn/search/',
       data: {
@@ -109,7 +130,7 @@ Page({
         'fromSource': 'zhuye',
         'screen_height': 360,
         'screen_width': 640,
-        'kw': this.data.searchHotWord
+        'kw': that.data.searchContent||that.data.searchHotWord
       },
       header: {
         'x-region': '{ "station_code": "MRYX|mryx_bj_dsbjs", "delivery_type": 1, "chrome_type": 0, "address_code": 110101 }'
@@ -149,23 +170,11 @@ Page({
     }
   },
   searchFun: function() {
-    if (!this.data.searchContent.replace(/^\s*|\s*$/g, "")){
-      this.setData({
-        searchContent: this.data.searchHotWord
-      })
-
-    }
-    var searchHistory = wx.getStorageSync('searchHistory') || [];
-    searchHistory.unshift(this.data.searchContent);
-    wx.setStorageSync('searchHistory', searchHistory);
-    this.setData({
-      searchHistory: searchHistory
-    })
+   
     this.onSearchContent();
   },
   // 清除搜索记录
   clearSearchHistory:function(){
-    console.log(22)
     wx.removeStorageSync('searchHistory');
     this.setData({
       searchHistory:[]
