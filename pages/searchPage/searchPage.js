@@ -96,11 +96,12 @@ Page({
   // 自定义的方法
   onSearchContent: function(e) {
     var that =this;
-    if (e && e._relatedInfo){
+    console.log(e)
+    if (e&&e._relatedInfo){
       this.setData({
         searchContent: e._relatedInfo.anchorTargetText
       })
-    }else{
+    }else if(e){
       this.setData({
         searchContent: e
       }) 
@@ -117,7 +118,6 @@ Page({
     this.setData({
       searchHistory: searchHistory
     })
-    console.log(e._relatedInfo.anchorTargetText)
     wx.request({
       url: 'https://as-vip.missfresh.cn/search/',
       data: {
@@ -130,7 +130,7 @@ Page({
         'fromSource': 'zhuye',
         'screen_height': 360,
         'screen_width': 640,
-        'kw': that.data.searchContent||that.data.searchHotWord
+        'kw': that.data.searchContent
       },
       header: {
         'x-region': '{ "station_code": "MRYX|mryx_bj_dsbjs", "delivery_type": 1, "chrome_type": 0, "address_code": 110101 }'
@@ -145,6 +145,7 @@ Page({
     })
   },
   bindinput: function(e) {
+    var that= this;
     this.setData({
       searchContent: e.detail.value
     })
@@ -170,7 +171,6 @@ Page({
     }
   },
   searchFun: function() {
-   
     this.onSearchContent();
   },
   // 清除搜索记录
