@@ -5,12 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isSearch:false,
+    isSearch: false,
     products: [],
     hotSearch: [],
     searchHotWord: '',
     searchContent: '',
-    searchHistory:[],
+    searchHistory: [],
+    sendTimeImage: '',
 
   },
 
@@ -25,7 +26,7 @@ Page({
       searchHotWord: options.searchHotWord,
       // searchContent: options.searchHotWord,
     })
-   
+
     var that = this;
     wx.request({
       url: 'https://as-vip.missfresh.cn/v3/product/searchhotwords/',
@@ -95,16 +96,16 @@ Page({
   },
   // 自定义的方法
   onSearchContent: function(e) {
-    var that =this;
+    var that = this;
     console.log(e)
-    if (e&&e._relatedInfo){
+    if (e && e._relatedInfo) {
       this.setData({
         searchContent: e._relatedInfo.anchorTargetText
       })
-    }else if(e){
+    } else if (e) {
       this.setData({
         searchContent: e
-      }) 
+      })
     }
     if (!this.data.searchContent.replace(/^\s*|\s*$/g, "")) {
       this.setData({
@@ -113,7 +114,7 @@ Page({
 
     }
     // 在历史记录点击链接  不增加历史记录
-    if (!e||(e&&!e.currentTarget.dataset.type)){
+    if (!e || (e && !e.currentTarget.dataset.type)) {
       var searchHistory = wx.getStorageSync('searchHistory') || [];
       searchHistory.unshift(this.data.searchContent);
       wx.setStorageSync('searchHistory', searchHistory);
@@ -121,7 +122,7 @@ Page({
         searchHistory: searchHistory
       })
     }
-    
+
     wx.request({
       url: 'https://as-vip.missfresh.cn/search/',
       data: {
@@ -141,19 +142,21 @@ Page({
       },
       method: 'get',
       success(res) {
+        console.log(res)
         that.setData({
           products: res.data.data[0].active_item,
-          isSearch:true
+          sendTimeImage: res.data.data[0].trans_type_image,
+          isSearch: true
         })
       }
     })
   },
   bindinput: function(e) {
-    var that= this;
+    var that = this;
     this.setData({
       searchContent: e.detail.value
     })
-    if (this.data.searchContent.length==0){
+    if (this.data.searchContent.length == 0) {
       wx.request({
         url: 'https://as-vip.missfresh.cn/v3/product/searchhotwords/',
         method: 'get',
@@ -170,7 +173,7 @@ Page({
         }
       })
       this.setData({
-        isSearch:false
+        isSearch: false
       })
     }
   },
@@ -178,10 +181,16 @@ Page({
     this.onSearchContent();
   },
   // 清除搜索记录
-  clearSearchHistory:function(){
+  clearSearchHistory: function() {
     wx.removeStorageSync('searchHistory');
     this.setData({
-      searchHistory:[]
+      searchHistory: []
+    })
+  },
+  // 返回上一个页面
+  searchBack: function(e) {
+    wx.switchTab({
+      url: '../index/index',
     })
   }
 

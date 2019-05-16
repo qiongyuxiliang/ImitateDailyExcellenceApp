@@ -55,7 +55,6 @@
 }
 
 .search_content {
-   
   padding-top: 5%;
   display: flex;
   justify-content: left;
@@ -71,15 +70,24 @@
   margin-right: 2%;
   margin-bottom: 4%;
 }
-.history_title{
+
+.history_title {
   display: flex;
   justify-content: space-between;
- align-items: center;
+  align-items: center;
 }
-.delete_icon{
+
+.delete_icon {
   width: 15%;
 }
-.clear_history{
+
+.clear_history {
   display: flex;
   align-items: center;
+}
+
+.sendTimeImage {
+  background: white;
+  width: 20%;
+  margin: 5% 0;
 }

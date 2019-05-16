@@ -259,6 +259,11 @@ Component({
       wx.redirectTo({
         url: '../../pages/searchPage/searchPage?searchHotWord=' + that.data.searchHotWord,
       })
+    },
+    selectRegion(){
+      wx.redirectTo({
+        url: '../../address/address',
+      })
     }
   }
 })

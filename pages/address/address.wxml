@@ -1,0 +1,15 @@
+<!--pages/address/address.wxml-->
+<view class='address_container'>
+  <view class='address_header'>
+    <view>选择收货地址</view>
+  </view>
+  <view class='select_address'>
+    <view>北京</view>
+    <input placeholder='请输入要收货的小区/写字楼'></input>
+  </view>
+  <view class='notify'>因各地区商品和配送服务不同，请您选择准确收货地址</view>
+  <view class='address_location'>
+    <text class='city'>北京市</text>
+    <text class='local_address'>当前位置</text>
+  </view>
+</view>
