@@ -17,7 +17,7 @@
     <view class='hot_search'>
       <view class='search_title'>热门搜索</view>
       <view class='search_content'>
-        <view class='search_table' wx:for="{{hotSearch}}" wx:key="{{index}}" bindtap='onSearchContent'>
+        <view class='search_table' wx:for="{{hotSearch}}" wx:key="{{index}}" bindtap='onSearchContent' data-text="{{item}}">
           <text>{{item}}</text>
         </view>
 

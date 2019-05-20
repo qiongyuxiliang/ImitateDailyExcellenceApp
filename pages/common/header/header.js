@@ -257,7 +257,7 @@ Component({
     jumpToSearchPage(){
       var that =this;
       wx.redirectTo({
-        url: '..//searchPage/searchPage?searchHotWord=' + that.data.searchHotWord,
+        url: '../searchPage/searchPage?searchHotWord=' + that.data.searchHotWord,
       })
     },
     selectRegion(){

@@ -98,15 +98,16 @@ Page({
   onSearchContent: function(e) {
     var that = this;
     console.log(e)
-    if (e && e._relatedInfo) {
+    if (e && e.currentTarget.dataset.text) {
       this.setData({
-        searchContent: e._relatedInfo.anchorTargetText
+        searchContent: e.currentTarget.dataset.text
       })
     } else if (e) {
       this.setData({
         searchContent: e
       })
     }
+    console.log(this.data.searchContent)
     if (!this.data.searchContent.replace(/^\s*|\s*$/g, "")) {
       this.setData({
         searchContent: this.data.searchHotWord
