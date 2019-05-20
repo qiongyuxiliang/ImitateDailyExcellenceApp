@@ -1,0 +1,12 @@
+<!--pages/searchAddress/searchAddress.wxml-->
+<view class='search_address_container'>
+  <view class='search_container'>
+  <view class='clear' wx:if="{{searchKey.length}}" bindtap='clear'></view>
+    <input class='selected_input' bindinput='searchKey' value='{{searchKey}}'>
+    </input>
+    <view class='address_list' wx:for='{{addressList.data}}' wx:key="{{index}}">
+      <view class='address_title'>{{item.title}}</view>
+      <view class='address_address'>{{item.address}}</view>
+    </view>
+  </view>
+</view>

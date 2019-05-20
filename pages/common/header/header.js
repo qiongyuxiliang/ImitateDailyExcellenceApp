@@ -257,12 +257,12 @@ Component({
     jumpToSearchPage(){
       var that =this;
       wx.redirectTo({
-        url: '../../pages/searchPage/searchPage?searchHotWord=' + that.data.searchHotWord,
+        url: '..//searchPage/searchPage?searchHotWord=' + that.data.searchHotWord,
       })
     },
     selectRegion(){
       wx.redirectTo({
-        url: '../../address/address',
+        url: '../address/address',
       })
     }
   }

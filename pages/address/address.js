@@ -62,5 +62,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  searchAddress:function(){
+    wx.navigateTo({
+      url: '../searchAddress/searchAddress',
+    })
+
   }
 })
