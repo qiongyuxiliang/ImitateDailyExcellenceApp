@@ -1,5 +1,7 @@
 /* pages/find/find.wxss */
-
+image{
+  height: 0;
+}
 .find_header_image {
   width: 7%;
   border-radius: 50%;

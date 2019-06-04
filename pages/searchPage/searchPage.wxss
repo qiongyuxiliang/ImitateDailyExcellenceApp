@@ -1,5 +1,7 @@
 /* pages/searchPage/searchPage.wxss */
-
+image{
+  height: 0;
+}
 .search_container {
   margin: 0 3%;
 }
